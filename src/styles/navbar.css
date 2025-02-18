@@ -25,7 +25,7 @@
     display: inline-block;
     position: relative;
   /*   width: 18%; */
-    border-radius: 10px;
+    border-radius: 28px;
     overflow: hidden;
     transition: all 0.3s ease;
   /*   border: 2px solid rgba(0, 0, 0, 0.2); */
@@ -35,14 +35,14 @@
   .navbar ul li a {
     color: black; /* Text color set to black */
     text-decoration: none;
-    font-size: .875rem;
-    padding: 15px 10px;
+    font-size: .775rem;
+    padding: 12px 15px;
     font-weight: 600;
     display: block;
     text-align: center;
     position: relative;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 28px;
     background-color: transparent;
     transition: background-color 0.3s, transform 0.3s;
   }
