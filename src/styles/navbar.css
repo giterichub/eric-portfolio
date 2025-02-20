@@ -66,3 +66,22 @@
   .navbar ul li:hover .progress-bar {
     background-color: #ff9900; /* Slightly darker on hover */
   }
+
+  /* Section styling (same as before) */
+.section {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .section1 { background-color: #ff6347; }
+  .section2 { background-color: #4682b4; }
+  .section3 { background-color: #32cd32; }
+  .section4 { background-color: #f0e68c; color: black; }
+  .section5 { background-color: #800080; }
