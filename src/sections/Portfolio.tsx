@@ -1,4 +1,8 @@
 const Portfolio = () => {
-    return <div>Intro Section</div>
+    return (
+        <div id="section4" className="section section4">
+            <p>Section 4: Yellow Background</p>
+        </div>
+    );
 } 
 export default Portfolio;
