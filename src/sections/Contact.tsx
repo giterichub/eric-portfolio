@@ -1,25 +1,11 @@
 import React from 'react';
 import '../styles/contact.css';
-import { FaLinkedin, FaYoutube, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
   return (
     <div id="contact" className="section section5">
       <div className="contact-container">
         <h1>SAY HELLO</h1>
-
-        <hr className="section-divider" />
-
-        <div className="input-container">
-          <input 
-            type="text" 
-            placeholder="Type your full name here" 
-            aria-label="Enter your full name"
-            className="name-input"
-          />
-        </div>
-
-        <hr className="section-divider" />
 
         <div className="next-step-container">
           <div className="pulsating-circle">
@@ -30,12 +16,14 @@ const Contact = () => {
         </div>
 
         <div className="social-links">
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaYoutube /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaTwitter /></a>
+          <a href="#">LINKEDIN</a>
+          <a href="#">YOUTUBE</a>
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">TWITTER</a>
         </div>
+
+        <hr className="section-divider" />
 
         <div className="footer-links">
           <a href="#">TERMS & CONDITIONS</a>
