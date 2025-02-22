@@ -1,6 +1,6 @@
 export const contactContent = {
     socialLinks: [
-      { name: "LinkedIn", url: "www.linkedin.com/in/eric-antao" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/eric-antao/" },
       { name: "Github", url: "https://github.com/giterichub" },
       { name: "Portfolio", url: "https://giterichub.github.io/My-Portfolio/" },
       { name: "ericantao99@gmail.com", url: "mailto:ericantao99@gmail.com" },
