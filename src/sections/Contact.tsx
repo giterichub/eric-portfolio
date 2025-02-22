@@ -1,5 +1,5 @@
-import React from 'react';
 import '../styles/contact.css';
+import { contactContent } from "../content/contact";
 
 const Contact = () => {
   return (
@@ -16,15 +16,12 @@ const Contact = () => {
         </div>
 
         <div className="social-links">
-          <a href="#">LINKEDIN</a>
-          <a href="#">YOUTUBE</a>
-          <a href="#">INSTAGRAM</a>
-          <a href="#">FACEBOOK</a>
-          <a href="#">TWITTER</a>
+        {contactContent.socialLinks.map((item, index) => (
+           <a key={index} href={item.url} target='-blank' rel="noopener noreferrer">{item.name}</a> 
+        ))}
         </div>
 
         <hr className="section-divider" />
-
         <div className="footer-links">
           <a href="#">TERMS & CONDITIONS</a>
           <span>|</span>
