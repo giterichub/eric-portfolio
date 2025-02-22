@@ -1,0 +1,18 @@
+/* Section styling (same as before) */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .section1 { background-color: #ff6347; }
+  .section2 { background-color: #4682b4; }
+  .section3 { background-color: #32cd32; }
+  .section4 { background-color: #f0e68c; color: black; }
+  .section5 { background-color: #d9d9d9; }
