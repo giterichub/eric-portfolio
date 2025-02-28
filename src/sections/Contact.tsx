@@ -5,7 +5,9 @@ const Contact = () => {
   return (
     <div id="contact" className="section section5">
       <div className="contact-container">
-        <h1>SAY HELLO</h1>
+        <div className='contact-header'>
+          <h1>SAY HELLO</h1>
+        </div>
 
         <div className="next-step-container">
           <div className="pulsating-circle">
@@ -15,18 +17,21 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="social-links">
-        {contactContent.socialLinks.map((item, index) => (
-           <a key={index} href={item.url} target='-blank' rel="noopener noreferrer">{item.name}</a> 
-        ))}
-        </div>
+        <div className='footer'>
+          <div className="social-links">
+          {contactContent.socialLinks.map((item, index) => (
+            <a key={index} href={item.url} target='-blank' rel="noopener noreferrer">{item.name}</a> 
+          ))}
+          </div>
 
-        <hr className="section-divider" />
-        <div className="footer-links">
-          <a href="#">TERMS & CONDITIONS</a>
-          <span>|</span>
-          <a href="#">PRIVACY POLICY</a>
+          <hr className="section-divider" />
+          <div className="footer-links">
+            <a href="#">Eric Antao</a>
+            <span>|</span>
+            <span>2025</span>
+          </div>
         </div>
+        
       </div>
     </div>
   );
