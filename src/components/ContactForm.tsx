@@ -6,6 +6,7 @@ interface contactFormCloseProps{
 }
 
 const ContactForm = ({ onClose }: contactFormCloseProps) => {
+  const [isClosing, setIsClosing] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,13 +14,18 @@ const ContactForm = ({ onClose }: contactFormCloseProps) => {
     message: ''
   });
 
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(onClose, 300); // Match animation duration
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') handleClose();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+  }, [handleClose]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,9 +35,10 @@ const ContactForm = ({ onClose }: contactFormCloseProps) => {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>&times;</button>
+    <div 
+      className={`modal-overlay ${isClosing ? 'closing' : ''}`} onClick={handleClose}>
+      <div className={`modal-content ${isClosing ? 'closing' : ''}`} onClick={(e) => e.stopPropagation()} >
+        <button className="close-btn" onClick={handleClose}>&times;</button>
         
         <h2>Send a Message</h2>
         

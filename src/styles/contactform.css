@@ -10,10 +10,12 @@
     justify-content: center;
     align-items: center;
     z-index: 1001;
+    animation: overlayEnter 0.3s ease-out;
   }
   
+  /* Update modal content */
   .modal-content {
-    background: #1e1e1e; /* Dark background */
+    background: #1e1e1e;
     color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -21,6 +23,58 @@
     max-width: 500px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: modalEnter 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center center;
+  }
+
+  /* Add these new animations */
+@keyframes modalEnter {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes overlayEnter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Add exit animations */
+@keyframes modalExit {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+  
+  @keyframes overlayExit {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .modal-overlay.closing {
+    animation: overlayExit 0.3s ease-in forwards;
+  }
+  
+  .modal-content.closing {
+    animation: modalExit 0.3s ease-in forwards;
   }
   
   .close-btn {
@@ -151,10 +205,12 @@
     justify-content: center;
     align-items: center;
     z-index: 1001;
+    animation: overlayEnter 0.3s ease-out;
   }
   
+  /* Update modal content */
   .modal-content {
-    background: #1e1e1e; /* Dark background */
+    background: #1e1e1e;
     color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -162,16 +218,21 @@
     max-width: 500px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: modalEnter 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center center;
   }
   
   /* ... rest of the modal styles from previous answer ... */
   @media (min-width: 1366px) {
     .modal-content {
-      max-width: 600px;
+      max-width: 500px;
+      max-height: 85vh;
+      overflow-y: auto;
       padding: 3rem;
+      animation: modalEnter 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   
-    h2 {
+    .modal-content h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
     }
