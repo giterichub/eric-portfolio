@@ -1,7 +1,10 @@
 import '../styles/contact.css';
 import { contactContent } from "../content/contact";
+import { useState } from 'react';
+import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
+  const [showForm, setShowForm] = useState(false);
   return (
     <div id="contact" className="section section5">
       <div className="contact-container">
@@ -11,10 +14,11 @@ const Contact = () => {
 
         <div className="next-step-container">
           <div className="pulsating-circle">
-            <button className="next-step-btn">
+            <button className="next-step-btn" onClick={() => setShowForm(true)}>
               NEXT STEP
             </button>
           </div>
+          {showForm && <ContactForm onClose={() => setShowForm(false)} />}
         </div>
 
         <div className='footer'>
