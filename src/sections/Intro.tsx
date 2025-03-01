@@ -1,4 +1,5 @@
 // Home.tsx
+import '../styles/intro.css';
 const Home = () => {
     return (
       <div id="home" className="section section1">
