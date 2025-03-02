@@ -1,5 +1,6 @@
 import "../styles/intro.css";
 import "../assets/backgrounds/background-hero-merged.webp";
+import AnimatedCircleButton from '../components/AnimatedCircleButton';
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
         <p>Your introduction text here</p>
       </div> */}
       <div className="styled-box"></div>
+      <div className="circle-rotate-container">
+        <AnimatedCircleButton />
+      </div>
     </div>
   );
 };
