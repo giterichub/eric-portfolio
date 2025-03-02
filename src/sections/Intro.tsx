@@ -1,8 +1,14 @@
 import "../styles/intro.css";
 import "../assets/backgrounds/background-hero-merged.webp";
 import AnimatedCircleButton from '../components/AnimatedCircleButton';
+import ContactForm from '../components/ContactForm';
+import { useState } from "react";
 
 const Home = () => {
+  const [showForm, setShowForm] = useState(false);
+  const handleButtonClick = () => {
+    setShowForm(true);  // Show the ContactForm when button is clicked
+  };
   return (
     <div id="home" className="section section1">
       <div className="strips-container">
@@ -34,8 +40,9 @@ const Home = () => {
       </div> */}
       <div className="styled-box"></div>
       <div className="circle-rotate-container">
-        <AnimatedCircleButton />
+        <AnimatedCircleButton onClick={handleButtonClick} />
       </div>
+      {showForm && <ContactForm onClose={() => setShowForm(false)} />}
     </div>
   );
 };
