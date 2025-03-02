@@ -23,7 +23,7 @@
   .link__cloud {
     transform-origin: 50% 50%;
     animation: rotate normal infinite 60s linear; /* 20s * 3 (rotation duration) */
-    fill: rgba(255, 255, 255, 0.15);
+    fill: #d21338; /* rgba(255, 255, 255, 0.15) */
   }
   
   .link__face,
