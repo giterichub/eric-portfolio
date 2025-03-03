@@ -283,3 +283,60 @@ marker path {
     z-index: 2;
 }
 /* ---- SVG: Overlapping Triangles END ---- */
+
+
+/* Animated: Horizontal Strips START */
+
+.h-strips-container{
+    height: 50vh;
+    width: 10%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    right: 50px;
+    top: 15%;
+    z-index: 2;
+ }
+.hstrip{
+    background-color: #000000;
+    width: 100px;
+    height: 18px;
+    position: relative;
+    margin-bottom: 20px;
+    opacity: 0; 
+    transform: translateY(0); 
+    animation: slideLower 0.5s forwards;
+  }
+ 
+  @keyframes slideLower {
+    0% {
+        transform: translateY(-100vh); /* Start from above the screen */
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        transform: translateY(0); /* Move to its final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.hstrip:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.hstrip:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.hstrip:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.hstrip:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.hstrip:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.hstrip:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* ---- Animated: Horizontal Strips END ---- */

@@ -102,6 +102,15 @@ const Home = () => {
         </svg>
       </div>
 
+      <div className="h-strips-container">
+        <div className="hstrip"></div>
+        <div className="hstrip"></div>
+        <div className="hstrip"></div>
+        <div className="hstrip"></div>
+        <div className="hstrip"></div>
+        <div className="hstrip"></div>
+      </div>
+
       <div className="circle-rotate-container">
         <AnimatedCircleButton onClick={handleButtonClick} />
       </div>
