@@ -274,3 +274,12 @@ marker path {
 }
 
 /* ---- SVG-animated: Zig-Zag lines End ---- */
+
+/* SVG: Overlapping Triangles START */
+.ov-triangle-container{
+    position: absolute;
+    top: -8%;
+    right: 35%;
+    z-index: 2;
+}
+/* ---- SVG: Overlapping Triangles END ---- */
