@@ -5,7 +5,7 @@ const About = () => {
     const elementRef = useRef<HTMLDivElement>(null);
     const [barReveal, setBarReveal] = useState(0);
     const [bodyAlpha, setBodyAlpha] = useState(0);
-  
+
     const buffer = 1.2; // Animation smoothness
     const barBaseWidth = 65; // Base border width
     const minOpacity = 0.3;
@@ -55,7 +55,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
     );
   };

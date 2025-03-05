@@ -83,11 +83,12 @@ box-sizing: border-box;
     max-width: 1440px;
     padding-left: 5.2083333333vw;
     padding-right: 5.2083333333vw;
+    background-color: #111922;
 }
 .about-statement{
     position: relative;
     font-size: 90px;
-    font-size: clamp(24px, 6.25vw, 90px);
+    font-size: clamp(42px, 6.25vw, 90px);
     font-family: "Playfair Display", serif;
     font-weight: 400;
     line-height: 1.0666666667;
@@ -100,3 +101,6 @@ box-sizing: border-box;
 .about-statement h2{
     margin-bottom: 30px;
 }
+
+
+
