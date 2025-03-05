@@ -1,4 +1,5 @@
 import { TechList } from "../content/skills";
+import '../styles/skillsmarqueeanimated.css'
 
 const SkillsMarqueeAnimated = () => {
   return (
