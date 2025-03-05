@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import '../styles/about.css';
+import SkillsMarqueeAnimated from '../components/SkillsMarqueeAnimated'
 
 const About = () => {
     const elementRef = useRef<HTMLDivElement>(null);
@@ -56,6 +57,7 @@ const About = () => {
                     </div>
                 </div>
             </div>  
+            <SkillsMarqueeAnimated />
         </div>
     );
   };
