@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Questrial&display=swap');
+:root {
+    --barReveal: 0px;
+    --bodyAlpha: 0;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+
+.scrollExpand {
+    opacity: 0;
+    position: relative;
+    background: #111922;
+}
+
+.scrollExpand.is-active {
+    height: 200vh;
+    opacity: 1;
+}
+
+.scrollExpand-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #111922;
+}
+
+.scrollExpand-borders {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.scrollExpand-border {
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    transition: all 0.25s ease-out;
+}
+
+.scrollExpand-border-top,
+.scrollExpand-border-bottom {
+    height: var(--barReveal);
+    width: 100%;
+}
+
+.scrollExpand-border-left,
+.scrollExpand-border-right {
+    width: var(--barReveal);
+    height: 100%;
+}
+
+.scrollExpand-border-top { top: 0; }
+.scrollExpand-border-bottom { bottom: 0; }
+.scrollExpand-border-left { left: 0; }
+.scrollExpand-border-right { right: 0; }
+
+/* .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: var(--bodyAlpha);
+    transition: opacity 0.3s ease-out;
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+} */
+
+ .fullscreen-bg-about{
+    min-height: 100vh;
+    padding: 100px 0;
+ }
+ .about-pageWrap {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    max-width: 1440px;
+    padding-left: 5.2083333333vw;
+    padding-right: 5.2083333333vw;
+}
+.about-statement{
+    position: relative;
+    font-size: 90px;
+    font-size: clamp(24px, 6.25vw, 90px);
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 1.0666666667;
+    letter-spacing: -0.0009375em;
+    text-transform: none;
+    opacity: var(--bodyAlpha);
+    transition: opacity 0.3s ease-out;
+    padding: 25px 0;
+}
+.about-statement h2{
+    margin-bottom: 30px;
+}
