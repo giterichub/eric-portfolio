@@ -1,4 +1,4 @@
-import { TechList, Technology } from '../content/skills';
+import { TechList } from "../content/skills";
 
 const SkillsMarqueeAnimated = () => {
   return (
@@ -11,9 +11,11 @@ const SkillsMarqueeAnimated = () => {
           <div className="marquee-container">
             <div className="marquee-content">
               {/* Double the array for seamless loop */}
-              {[...technologies, ...technologies].map((tech, index) => (
+              {[...TechList, ...TechList].map((tech, index) => (
                 <div key={index} className="tech-item">
-                  <div className="tech-icon">{tech.icon}</div>
+                  <div className="tech-icon">
+                    <tech.icon /> {/* Render the icon */}
+                  </div>
                   <span className="tech-name">{tech.name}</span>
                 </div>
               ))}
@@ -24,4 +26,5 @@ const SkillsMarqueeAnimated = () => {
     </div>
   );
 };
+
 export default SkillsMarqueeAnimated;
