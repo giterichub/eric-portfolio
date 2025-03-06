@@ -1,5 +1,5 @@
-import { SiTypescript, SiJavascript } from "react-icons/si";
-import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa";
+import { SiTypescript, SiJavascript, SiAdobephotoshop } from "react-icons/si";
+import { FaReact,FaHtml5, FaCss3, FaNodeJs, FaWordpress } from "react-icons/fa";
 
 export interface Technology {
   name: string;
@@ -11,8 +11,8 @@ export const TechList: Technology[] = [
   { name: 'React', icon: FaReact },
   { name: 'TypeScript', icon: SiTypescript },
   { name: 'JavaScript', icon: SiJavascript },
-  { name: 'Node.js', icon: FaNodeJs },
-  { name: 'Python', icon: FaPython },
-  { name: 'AWS', icon: FaAws },
-  { name: 'Docker', icon: FaDocker },
+  { name: 'Wordpress', icon: FaWordpress },
+  { name: 'HTML5', icon: FaHtml5 },
+  { name: 'CSS3', icon: FaCss3 },
+  { name: 'Photoshop', icon: SiAdobephotoshop },
 ];

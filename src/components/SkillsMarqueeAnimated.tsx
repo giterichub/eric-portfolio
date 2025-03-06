@@ -2,6 +2,7 @@ import { TechList } from "../content/skills";
 import '../styles/skillsmarqueeanimated.css'
 
 const SkillsMarqueeAnimated = () => {
+  console.log([...TechList, ...TechList]);
   return (
     <div className="marquee-main-container">
       <div className="about-pageWrap">
@@ -13,7 +14,9 @@ const SkillsMarqueeAnimated = () => {
             <div className="marquee-content">
               {/* Double the array for seamless loop */}
               {[...TechList, ...TechList].map((tech, index) => (
-                <div key={index} className="tech-item">
+                <div key={index} className="tech-item"
+                
+                >
                   <div className="tech-icon">
                     <tech.icon /> {/* Render the icon */}
                   </div>
