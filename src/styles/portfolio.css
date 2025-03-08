@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+:root {
+    --translateX: 0px;
+    --rect-width: 100px; /* Default size, gets updated */
+    --rect-height: 20px;
+    --slider-opacity: 0;
+    --slider-translateY: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+.section4 {
+    /* height: 100vh; */
+    background-color: white;
+    color: black;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+} */
+
+.projects {
+    /* position: relative;
+    height: 180vh;
+    display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.projects-wrapper{
+
+}
+.projects-title {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-text {
+    font-size: clamp(5rem, 25vw, 47.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    line-height: 0.9;
+}
+
+.work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+/*     transform: translate3d(var(--translateX), 0, 0); */
+    transition: transform 0.2s ease-out;
+}
+
+.rect {
+    width: var(--rect-width);
+    height: var(--rect-height);
+    background-color: red;
+    display: inline-block;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.project-slider {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--slider-translateY));
+    opacity: var(--slider-opacity);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    background: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.project-placeholder {
+    width: 300px;
+    height: 200px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+
+
+
+/* Outer container where the user can change the size */
+.outer-container {
+  width: var(--rect-width);
+    height: var(--rect-height);
+    display: inline-block;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+  object-fit: cover;
+}
+
+
+/* Carousel images */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* Controls to change the size of the outer container */
+input, button {
+  margin: 10px;
+}
+
+
+.pt-35 {
+    padding-top: 35px;
+  }
+  
+  .pb-250 {
+    padding-bottom: 250px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .pt-35 {
+      padding-top: 20px; /* Adjust padding-top for smaller screens */
+    }
+  
+    .pb-250 {
+      padding-bottom: 150px; /* Adjust padding-bottom for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pt-35 {
+      padding-top: 10px; /* Further adjustment for very small screens */
+    }
+  
+    .pb-250 {
+      padding-bottom: 100px; /* Further adjustment for very small screens */
+    }
+  }
+  .mt-100 {
+    margin-top: 100px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .mt-100 {
+      margin-top: 60px; /* Adjust margin-top for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .mt-100 {
+      margin-top: 30px; /* Further adjustment for very small screens */
+    }
+  }
