@@ -44,7 +44,6 @@ const Portfolio = () => {
           setSliderOpacity(0);
           setSliderTranslateY(50);
         }
-  
         requestAnimationFrame(updateScrollEffects);
       };
   
