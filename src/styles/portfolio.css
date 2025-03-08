@@ -26,11 +26,6 @@
     align-items: center;
 }
 
-/* body {
-    background: black;
-    color: white;
-    overflow-x: hidden;
-} */
 
 /* .projects {
     position: relative;
@@ -98,9 +93,6 @@
     border-radius: 8px;
 }
 
-
-
-
 /* Outer container where the user can change the size */
 .outer-container {
   width: var(--rect-width);
@@ -108,34 +100,6 @@
     display: inline-block;
     transition: width 0.2s ease-out, height 0.2s ease-out;
   object-fit: cover;
-}
-
-
-/* Carousel images */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures images cover the container */
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-image.active {
-  opacity: 1;
-}
-
-/* Controls to change the size of the outer container */
-input, button {
-  margin: 10px;
 }
 
 
