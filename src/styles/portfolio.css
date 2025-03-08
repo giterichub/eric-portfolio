@@ -32,17 +32,15 @@
     overflow-x: hidden;
 } */
 
-.projects {
-    /* position: relative;
+/* .projects {
+    position: relative;
     height: 180vh;
     display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-.projects-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
 
-}
 .projects-title {
     text-align: center;
     position: relative;
