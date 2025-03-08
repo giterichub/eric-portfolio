@@ -1,6 +1,16 @@
 import '../styles/slideshow.css';
-import {slideShowContent} from '../content/slideshow';
+import { slideShowContent } from '../content/slideshow';
 import { useEffect, useState } from 'react';
+
+interface Image {
+    name: string;
+    alt: string;
+    url: string;
+  }
+  
+  interface SlideShowContent {
+    imageLinks: Image[];
+  }
 
 const SlideShow = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
