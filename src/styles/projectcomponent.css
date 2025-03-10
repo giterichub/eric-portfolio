@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Container */
+.project-item {
+    width: 90%;
+    max-width: 1200px; /* Increased max-width */
+    margin: 2rem auto;
+    position: relative;
+/*             border-radius: 4rem; */
+  border-radius: max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px));
+    overflow: hidden;
+}
+
+
+/* Main Tile Styles */
+.case-tile {
+    --theme: #92BDE4;
+    --radius: 4rem;
+    background-color: var(--theme);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 300px;
+/*             border-radius: var(--radius); */
+  border-radius: max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px));
+  
+}
+
+/* Image Container */
+.case-tile__bg {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+/* Image Styles */
+.case-tile__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.case-tile__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(217, 161, 29, 0.5);
+}
+
+/* Content Container */
+.case-tile__content {
+    padding: 2rem;
+    color: white;
+    background-color: var(--theme);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Top Right Controls */
+.case-tile__controls {
+    position: absolute;
+    top: 1.7em;
+    right: 1.7rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 2;
+}
+
+/* CTA Styles */
+.case-tile__cta {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1.5rem;
+/*             border-radius: 2rem; */
+  border-radius: max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px));
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.case-tile__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Typography */
+h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 768px) {
+    .project-item {
+        height: 80vh;
+        max-height: 800px;
+        width: 80%;
+    }
+
+    .case-tile {
+        height: 100%;
+    }
+
+    .case-tile__bg {
+        height: 100%;
+        padding-top: 0;
+        position: absolute;
+        clip-path: inset(0 0 0 0 round max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px)));
+        transition: clip-path 0.3s ease;
+    }
+
+    .case-tile__content {
+        position: absolute;
+        bottom: -30%;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.3s ease;
+        background-color: transparent;
+        padding: 3rem;
+    }
+
+    .case-tile__cta {
+        opacity: 0;
+        transform: translateX(-2rem);
+        transition: all 0.3s ease;
+    }
+
+    .case-tile:hover .case-tile__bg {
+        clip-path: inset(1.2rem 1.2rem 12rem 1.2rem round max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px)));
+    }
+
+    .case-tile:hover .case-tile__thumb {
+        transform: scale(1.05);
+    }
+
+    .case-tile:hover .case-tile__content {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .case-tile:hover .case-tile__cta {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+    .project-item {
+        border-radius: 2rem;
+        width: 94%;
+        height: calc(100vh - 4rem);
+        margin: 2rem auto;
+    }
+
+    .case-tile {
+        height: 100%;
+        min-height: auto;
+        border-radius: 2rem;
+    }
+
+    .case-tile__bg {
+        height: 60vh;
+        padding-top: 0;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .case-tile__content {
+        height: 40vh;
+        padding: 1.5rem;
+        border-radius: 0 0 2rem 2rem;
+        overflow-y: auto;
+    }
+
+    .case-tile__controls {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .case-tile__cta {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .case-tile__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+}
