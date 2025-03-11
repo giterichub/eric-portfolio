@@ -1,3 +1,4 @@
+import '../styles/projectcomponent.css'
 const ProjectComponent = () => {
     return (
         <div className="project-item">
