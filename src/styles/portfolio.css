@@ -1,148 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
 :root {
-    --translateX: 0px;
-    --rect-width: 100px; /* Default size, gets updated */
-    --rect-height: 20px;
-    --slider-opacity: 0;
-    --slider-translateY: 50px;
+  --translateX: 0px;
+  --rect-width: 100px;
+  --rect-height: 20px;
+  --slider-opacity: 0;
+  --slider-translateY: 50px;
+  --color_11: rgba(255, 255, 255, 0.9);
+  --color_12: rgba(245, 245, 245, 1);
+  --color_15: rgba(0, 0, 0, 0.8);
+  --header-height: 80px;
+  --one-unit: 16px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Sofia Sans Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sofia Sans Condensed", sans-serif;
 }
 
-.section4 {
-    /* height: 100vh; */
-    background-color: white;
-    color: black;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
 }
 
-
-/* .projects {
-    position: relative;
-    height: 180vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
+/* Projects Section */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 
 .projects-title {
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-text {
-    font-size: clamp(5rem, 25vw, 47.5rem);
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    line-height: 0.9;
+  font-size: clamp(5rem, 25vw, 47.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  line-height: 0.9;
 }
 
 .work {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-/*     transform: translate3d(var(--translateX), 0, 0); */
-    transition: transform 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: transform 0.2s ease-out;
 }
 
 .rect {
-    width: var(--rect-width);
-    height: var(--rect-height);
-    background-color: red;
-    display: inline-block;
-    transition: width 0.2s ease-out, height 0.2s ease-out;
+  width: var(--rect-width);
+  height: var(--rect-height);
+  display: inline-block;
+  transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 
-.project-slider {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%) translateY(var(--slider-translateY));
-    opacity: var(--slider-opacity);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-    background: black;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.project-placeholder {
-    width: 300px;
-    height: 200px;
-    background: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    border-radius: 8px;
-}
-
-/* Outer container where the user can change the size */
+/* Carousel Styles */
 .outer-container {
   width: var(--rect-width);
-    height: var(--rect-height);
-    display: inline-block;
-    transition: width 0.2s ease-out, height 0.2s ease-out;
+  height: var(--rect-height);
+  display: inline-block;
+  transition: width 0.2s ease-out, height 0.2s ease-out;
   object-fit: cover;
 }
 
-.pt-35 {
-    padding-top: 35px;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* Sticky Sections */
+.sticky-section {
+  position: sticky;
+  top: var(--header-height);
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 40px 5%;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+.sticky-section:nth-child(2) { z-index: 3; top: var(--header-height); }
+.sticky-section:nth-child(3) { z-index: 4; top: calc(var(--header-height) + 100px); }
+.sticky-section:nth-child(4) { z-index: 5; top: calc(var(--header-height) + 100px); }
+
+.content-card {
+  background: var(--color_15);
+  border-radius: 20px;
+  padding: 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.section-title {
+  color: var(--color_11);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  color: var(--color_11);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.styled-button {
+  background: transparent;
+  border: 2px solid var(--color_11);
+  color: var(--color_11);
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.styled-button:hover {
+  background: var(--color_11);
+  color: var(--color_15);
+}
+
+@media (max-width: 750px) {
+  .content-card {
+    padding: 40px;
+    border-radius: 15px;
   }
-  
-  .pb-250 {
-    padding-bottom: 250px;
+  .section-title {
+    font-size: 28px;
   }
-  
-  /* Media Query for responsiveness */
-  @media (max-width: 768px) {
-    .pt-35 {
-      padding-top: 20px; /* Adjust padding-top for smaller screens */
-    }
-  
-    .pb-250 {
-      padding-bottom: 150px; /* Adjust padding-bottom for smaller screens */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .pt-35 {
-      padding-top: 10px; /* Further adjustment for very small screens */
-    }
-  
-    .pb-250 {
-      padding-bottom: 100px; /* Further adjustment for very small screens */
-    }
-  }
-  .mt-100 {
-    margin-top: 100px;
-  }
-  
-  /* Media Query for responsiveness */
-  @media (max-width: 768px) {
-    .mt-100 {
-      margin-top: 60px; /* Adjust margin-top for smaller screens */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .mt-100 {
-      margin-top: 30px; /* Further adjustment for very small screens */
-    }
-  }
+}
