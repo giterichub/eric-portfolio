@@ -72,7 +72,7 @@ const Portfolio = () => {
 
   return (
     <main id="PAGE_SECTIONSc1dmp" className="c1rIl3">
-      <div id="c1dmp" className="c1dmp-container">
+      <div id="c1dmp" className="c1dmp-container section">
         {/* Projects Section */}
         <section className="projects">
           <div className="projects-wrapper">

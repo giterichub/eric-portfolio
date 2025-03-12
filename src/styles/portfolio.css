@@ -24,6 +24,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+.section{
+  position: relative;
+}
 
 /* Projects Section */
 .projects {
