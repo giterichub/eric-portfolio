@@ -1,6 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/portfolio.css';
+import { projects, slideshowImages } from '../content/projectContent';
 import ProjectComponent from '../components/ProjectComponent';
+
+const allSlideshowImages = [
+  ...new Set([
+    ...slideshowImages,
+    ...projects.flatMap(p => p.showInSlideshow ? p.images : [])
+  ])
+];
 
 const imageUrls = [
   'https://images.unsplash.com/photo-1741290723082-bd54c16a21a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -85,12 +93,12 @@ const Portfolio = () => {
                 <span className="rect">
                   <div className="outer-container">
                     <div className="carousel-container">
-                      {imageUrls.map((url, index) => (
+                      {allSlideshowImages.map((img, index) => (
                         <img
-                          key={url}
+                          key={`carousel-${index}`}
                           className={`carousel-image ${index === currentImageIndex ? 'active' : ''}`}
-                          src={url}
-                          alt={`Project ${index + 1}`}
+                          src={img}
+                          alt={`Project Showcase ${index + 1}`}
                         />
                       ))}
                     </div>
