@@ -85,13 +85,23 @@
 /* CTA Styles */
 .case-tile__cta {
     background: rgba(0, 0, 0, 0.2);
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1rem;
 /*             border-radius: 2rem; */
   border-radius: max(0.5px, 0.03125 * (min((100 * 1cqw), 9999px) - 17px));
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5rem;
+    gap: 0.5rem;
 }
+/* a.case-tile__cta svg{
+    font-size: 1.2rem;
+} */
 
 .case-tile__icon {
     width: 3rem;

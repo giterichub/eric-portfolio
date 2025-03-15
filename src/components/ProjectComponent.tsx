@@ -10,8 +10,12 @@ const ProjectComponent = ({ project }: Props) => {
         <div className="project-item" style={{backgroundColor: project.backgroundColor}}>
         <article className="case-tile">
             <div className="case-tile__controls">
-                <a href="#" className="case-tile__cta">Open Case Study</a>
-                <a href="#" className="case-tile__icon" aria-label="Open case study">↗</a>
+                <a href={project.tileCta.href} className="case-tile__cta" aria-label={project.tileCta.ariaLabel} title={project.tileCta.title}>
+                    <project.tileCta.icon /> {project.tileCta.platform}
+                </a>
+                <a href={project.tileIcon.href} className="case-tile__icon" aria-label={project.tileIcon.ariaLabel} title={project.tileIcon.title}>
+                    <project.tileIcon.icon />
+                </a>
             </div>
 
             <div className="case-tile__bg">
