@@ -18,9 +18,9 @@
 
 /* Main Tile Styles */
 .case-tile {
-    --theme: #92BDE4;
+    /* --theme: #92BDE4; */
     --radius: 4rem;
-    background-color: var(--theme);
+    /* background-color: var(--theme); */
     display: flex;
     flex-direction: column;
     position: relative;

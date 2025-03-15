@@ -1,7 +1,13 @@
 import '../styles/projectcomponent.css'
-const ProjectComponent = () => {
+import { Project } from '../content/projectContent';
+
+interface Props {
+    project: Project;
+}
+
+const ProjectComponent = ({ project }: Props) => {
     return (
-        <div className="project-item">
+        <div className="project-item" style={{backgroundColor: project.backgroundColor}}>
         <article className="case-tile">
             <div className="case-tile__controls">
                 <a href="#" className="case-tile__cta">Open Case Study</a>
@@ -11,15 +17,15 @@ const ProjectComponent = () => {
             <div className="case-tile__bg">
                 <div className="case-tile__thumb" 
                      style={{
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1741290723082-bd54c16a21a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'
+                        backgroundImage: `url("${project.featuredImage}")`
                       }}>
                     <div className="case-tile__overlay"></div>
                 </div>
             </div>
 
             <div className="case-tile__content">
-                <h2>Squarespace Expressiblity</h2>
-                <h3>Providing our users with content ready solutions</h3>
+                <h2>{project.title}</h2>
+                <h3>{project.description}</h3>
             </div>
         </article>
     </div>
