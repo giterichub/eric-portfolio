@@ -6,6 +6,7 @@ interface Controls{
     href: string;
     ariaLabel: string;
     title: string;
+    platform: string;
     icon: IconType;
 }
 
@@ -44,8 +45,8 @@ export interface Project {
       isFeatured: true,
       showInSlideshow: true,
       backgroundColor: '#2a2a2a',
-      tileCta: {href: 'https://github.com/giterichub/games-hub', ariaLabel: 'game-hub-repository', title: 'Game Hub Repository', icon: FaGithub},
-      tileIcon: {href: 'https://game-hub-mu-gold.vercel.app/', ariaLabel: 'game hub', title: 'Game Hub', icon: MdNorthEast},
+      tileCta: {href: 'https://github.com/giterichub/games-hub', ariaLabel: 'game-hub-repository', title: 'Game Hub Repository', platform: 'Github', icon: FaGithub},
+      tileIcon: {href: 'https://game-hub-mu-gold.vercel.app/', ariaLabel: 'game hub', title: 'Game Hub', platform: 'website', icon: MdNorthEast},
     },
     {
         id: 'movie-app',
@@ -59,8 +60,8 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        tileCta: {href: 'https://github.com/giterichub/movie-js-app', ariaLabel: 'movie-app-repository', title: 'Movie App', icon: FaGithub},
-        tileIcon: {href: 'https://movie-app-js-snowy.vercel.app/', ariaLabel: 'movie-app-website', title: 'Movie App', icon: MdNorthEast},
+        tileCta: {href: 'https://github.com/giterichub/movie-js-app', ariaLabel: 'movie-app-repository', title: 'Movie App', platform: 'Github', icon: FaGithub},
+        tileIcon: {href: 'https://movie-app-js-snowy.vercel.app/', ariaLabel: 'movie-app-website', title: 'Movie App Website', platform: 'website', icon: MdNorthEast},
       },
       {
         id: 'crosshair',
@@ -74,8 +75,8 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        tileCta: {href: 'https://github.com/giterichub/Crosshair-landing', ariaLabel: 'crosshair-github-repository', title: 'Crosshair Github Repository', icon: FaGithub},
-        tileIcon: {href: 'https://giterichub.github.io/Crosshair-landing/', ariaLabel: 'crosshair website', title: 'Crosshair', icon: MdNorthEast},
+        tileCta: {href: 'https://github.com/giterichub/Crosshair-landing', ariaLabel: 'crosshair-github-repository', title: 'Crosshair Github Repository', platform: 'Github', icon: FaGithub},
+        tileIcon: {href: 'https://giterichub.github.io/Crosshair-landing/', ariaLabel: 'crosshair website', title: 'Crosshair', platform: 'website', icon: MdNorthEast},
       }
     // Other projects...
   ];
