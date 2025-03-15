@@ -10,33 +10,33 @@ const allSlideshowImages = [
   ])
 ];
 
-const imageUrls = [
-  'https://images.unsplash.com/photo-1741290723082-bd54c16a21a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://plus.unsplash.com/premium_photo-1730032452988-c8d4df1256c5?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1741070487520-907d1359cb95?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-];
+// const imageUrls = [
+//   'https://images.unsplash.com/photo-1741290723082-bd54c16a21a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//   'https://plus.unsplash.com/premium_photo-1730032452988-c8d4df1256c5?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//   'https://images.unsplash.com/photo-1741070487520-907d1359cb95?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+// ];
 
-const sections = [
-  {
-    bgImage: imageUrls[0],
-    title: 'Short CV',
-    text: 'With a strategic brand and digital product development background...',
-    button: 'LinkedIn CV'
-  },
-  {
-    bgImage: imageUrls[1],
-    title: 'Experience',
-    text: 'Extensive experience working with global brands...',
-    button: 'View Portfolio'
-  },
-  {
-    bgImage: imageUrls[2],
-    title: 'Projects',
-    text: 'Extensive Projects working with global brands...',
-    button: 'View Portfolio'
-  }
-];
-const projectSections = Array.from({ length: 4 }); // Ensure order remains consistent
+// const sections = [
+//   {
+//     bgImage: imageUrls[0],
+//     title: 'Short CV',
+//     text: 'With a strategic brand and digital product development background...',
+//     button: 'LinkedIn CV'
+//   },
+//   {
+//     bgImage: imageUrls[1],
+//     title: 'Experience',
+//     text: 'Extensive experience working with global brands...',
+//     button: 'View Portfolio'
+//   },
+//   {
+//     bgImage: imageUrls[2],
+//     title: 'Projects',
+//     text: 'Extensive Projects working with global brands...',
+//     button: 'View Portfolio'
+//   }
+// ];
+// const projectSections = Array.from({ length: 4 });
 
 
 const Portfolio = () => {
@@ -72,7 +72,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const carouselInterval = setInterval(() => {
-      setCurrentImageIndex(prev => (prev + 1) % imageUrls.length);
+      setCurrentImageIndex(prev => (prev + 1) % slideshowImages.length);
     }, 3000);
 
     return () => clearInterval(carouselInterval);
@@ -111,16 +111,16 @@ const Portfolio = () => {
         </section>
 
         {/* Content Sections */}
-        {projectSections.map((_, index) => (
+        {projects.filter(p => p.isFeatured).map((project, index) => (
           <section
-            key={index}
+            key={project.id}
             className="sticky-section"
             style={{
               zIndex: index + 3, // Ensuring order in stacking
               top: 'var(--header-height)', // Keeping them sticky
           }}
           >
-            <ProjectComponent />
+            <ProjectComponent project={project} />
           </section>
         ))}
       </div>
