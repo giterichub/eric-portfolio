@@ -24,6 +24,16 @@
   overflow-x: auto;
   border-top-left-radius: 4rem;
   border-bottom-left-radius: 4rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.timeline-container:active {
+  cursor: grabbing;
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none;
 }
 
 .timeline-line {
@@ -39,6 +49,7 @@
   display: flex;
   gap: 2rem;
   height: 100%;
+  user-select: none
 }
 
 /* Timeline Cards */

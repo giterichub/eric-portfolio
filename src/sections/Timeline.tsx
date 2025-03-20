@@ -2,9 +2,12 @@ import '../styles/timeline.css';
 import { useState } from 'react';
 import YearCarousel from '../components/YearCarousel';
 import useViewport from '../hooks/useViewport'
+import useHorizontalScroll from '../hooks/useHorizontalScroll';
 
 const Timeline = () => {
   const [currentYear, setCurrentYear] = useState(2025);
+  const scrollRef = useHorizontalScroll();
+
   const [currentCards] = useState([
     { id: 1, title: "Milestone 1", content: "Lorem ipsum dolor sit amet." },
     { id: 2, title: "Achievement 2", content: "Consectetur adipiscing elit." },
@@ -21,7 +24,7 @@ const Timeline = () => {
         {/* Year Carousel */}
         <YearCarousel currentYear={currentYear} handleYearChange={handleYearChange} />
         {/* Timeline Container */}
-        <div className="timeline-container">
+        <div className="timeline-container" ref={scrollRef}>
           <div className="cards-wrapper">
             {currentCards.map(card => (
               <div key={card.id} className="timeline-card">
