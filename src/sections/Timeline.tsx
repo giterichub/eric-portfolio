@@ -1,5 +1,7 @@
 import '../styles/timeline.css';
 import { useState } from 'react';
+import YearCarousel from '../components/YearCarousel';
+import useViewport from '../hooks/useViewport'
 
 const Timeline = () => {
   const [currentYear, setCurrentYear] = useState(2025);
@@ -17,24 +19,7 @@ const Timeline = () => {
     <div id="timeline" className="section section3">
       <div className="timeline-wrapper">
         {/* Year Carousel */}
-        <div className="year-carousel">
-          <button 
-            className="year-button up-button"
-            onClick={() => handleYearChange(1)}
-            disabled={currentYear === 2025}
-          >
-            ↑
-          </button>
-          <div className="year-display">{currentYear}</div>
-          <button 
-            className="year-button down-button"
-            onClick={() => handleYearChange(-1)}
-            disabled={currentYear === 2014}
-          >
-            ↓
-          </button>
-        </div>
-
+        <YearCarousel currentYear={currentYear} handleYearChange={handleYearChange} />
         {/* Timeline Container */}
         <div className="timeline-container">
           <div className="cards-wrapper">

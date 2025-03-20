@@ -11,53 +11,6 @@
   overflow: hidden;
 }
 
-/* Year Carousel */
-.year-carousel {
-  position: absolute;
-  left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-}
-
-.year-display {
-  font-size: 2.5rem;
-  color: white;
-  font-weight: bold;
-  min-width: 100px;
-  text-align: center;
-}
-
-.year-button {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.year-button:disabled {
-  opacity: 1;
-  cursor: not-allowed;
-  border-color: #666;
-  color: #666;
-}
-
-.year-button:not(:disabled):hover {
-  background: rgba(255,255,255,0.1);
-}
-
 /* Timeline Container */
 .timeline-container {
   position: absolute;

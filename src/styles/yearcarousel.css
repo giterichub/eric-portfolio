@@ -1,0 +1,87 @@
+/* Year Carousel */
+.year-carousel {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+  }
+  
+  .year-display {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .year-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .year-button:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    border-color: #dcdcdc66;
+    color: #dcdcdc66;
+  }
+  
+  .year-button:not(:disabled):hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .year-carousel {
+      left: 50%;
+      top: 20%;
+      transform: translateX(-50%);
+      flex-direction: row;
+      gap: 30px;
+    }
+  
+    .timeline-container {
+      width: 90%;
+      height: 50vh;
+      right: 50%;
+      transform: translate(50%, -50%);
+      top: 55%;
+      padding: 20px 30px;
+    }
+  
+    .timeline-line {
+      left: 10px;
+    }
+  
+    .timeline-card {
+      min-width: 250px;
+      padding-left: 30px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .year-carousel {
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      flex-direction: column;
+    }
+  
+    .up-button { order: 1; }
+    .year-display { order: 2; }
+    .down-button { order: 3; }
+  }
