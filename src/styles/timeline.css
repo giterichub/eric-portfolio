@@ -1,0 +1,183 @@
+.section3{
+  position: relative;
+  display: block;
+}
+/* Existing styles */
+.timeline-wrapper {
+  position: relative;
+  display: block;
+  height: 100vh;
+  background-color: blueviolet;
+  overflow: hidden;
+}
+
+/* Year Carousel */
+.year-carousel {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.year-display {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+.year-button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.year-button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  border-color: #666;
+  color: #666;
+}
+
+.year-button:not(:disabled):hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 60vh;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #8a63d2;
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+/* Timeline Cards */
+.timeline-card {
+  min-width: 300px;
+  height: 100%;
+  background: #2a2a2a;
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-dot {
+  position: absolute;
+  left: -8px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  background: #8a63d2;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.card-content {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  transition: transform 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .year-carousel {
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .timeline-container {
+    width: 90%;
+    height: 50vh;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 55%;
+    padding: 20px 30px;
+  }
+
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-card {
+    min-width: 250px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .year-carousel {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+
+  .up-button { order: 1; }
+  .year-display { order: 2; }
+  .down-button { order: 3; }
+  /* .up-button::after {
+    content: '←';
+    display: block;
+  }
+
+  .up-button > * {
+    display: none;
+  }
+
+  .down-button::after {
+    content: '→';
+    display: block;
+  }
+
+  .down-button > * {
+    display: none;
+  } */
+}
