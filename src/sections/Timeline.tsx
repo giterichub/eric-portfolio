@@ -103,9 +103,14 @@ const Timeline = () => {
             {cards.map((card, index) => (
               <div key={card.id} className="timeline-card" ref={el => el && (cardsRef.current[index] = el)}>
                 <div className="card-header">
-                  <span className="year-range">
-                    {card.startYear}–{card.endYear}
-                  </span>
+                  <div className='header-title-year'>
+                    <span className='header-titl'>
+                      {card.title}
+                    </span>
+                    <span className="year-range">
+                      {card.startYear}–{card.endYear}
+                    </span>
+                  </div>
                   <h3>{card.title}</h3>
                 </div>
                 <p>{card.content}</p>
