@@ -101,7 +101,8 @@ const Timeline = () => {
         <div className="timeline-container" ref={containerRef}>
           <div className="cards-wrapper">
             {cards.map((card, index) => (
-              <div key={card.id} className="timeline-card" ref={el => el && (cardsRef.current[index] = el)}>
+              <div key={card.id} className="timeline-card" 
+              ref={el => el && (cardsRef.current[index] = el)} style={{background: card.bgColor}}>
                 <div className="card-header">
                   <div className='header-title-year'>
                     <span className='header-titl'>
