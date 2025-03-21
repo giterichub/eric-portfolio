@@ -114,7 +114,9 @@ const Timeline = () => {
                   </div>
                   <h3>{card.designation}</h3>
                 </div>
-                <p>{card.content}</p>
+                <ul>
+                  {card.content.map((item, index) => <li key={index}> {item} </li> )}
+                </ul>
               </div>
             ))}
           </div>
