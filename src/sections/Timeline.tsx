@@ -111,7 +111,7 @@ const Timeline = () => {
                       {card.startYear}–{card.endYear}
                     </span>
                   </div>
-                  <h3>{card.title}</h3>
+                  <h3>{card.designation}</h3>
                 </div>
                 <p>{card.content}</p>
               </div>

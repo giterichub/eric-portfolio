@@ -63,13 +63,18 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   transition: transform 0.3s;
   scroll-snap-align: start;
 }
 
 .timeline-card:hover {
   transform: translateY(-5px);
+}
+
+.header-title-year{
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-dot {
