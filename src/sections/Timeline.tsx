@@ -108,7 +108,7 @@ const Timeline = () => {
                       {card.title}
                     </span>
                     <span className="year-range">
-                      {card.startYear}–{card.endYear}
+                     {card.startMonth.substring(0, 3)} {card.startYear} – {card.endMonth.substring(0, 3)} {card.endYear}
                     </span>
                   </div>
                   <h3>{card.designation}</h3>

@@ -7,6 +7,7 @@ export interface TimelineCard {
   endMonth: string;
   startYear: number;
   endYear: number;
+  bgColor: string;
 }
 
 export const timelineCards: TimelineCard[] = [
@@ -18,7 +19,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "February",
     endMonth: "March",
     startYear: 2025,
-    endYear: 2025
+    endYear: 2025,
+    bgColor: '#f6d465'
   },
   {
     id: 2,
@@ -28,7 +30,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "November",
     endMonth: "December",
     startYear: 2024,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#f0523c'
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "July",
     endMonth: "July",
     startYear: 2024,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#feb0e1'
   },
   {
     id: 4,
@@ -48,7 +52,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "August",
     endMonth: "October",
     startYear: 2024,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#13af71'
   },
   {
     id: 5,
@@ -58,7 +63,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "June",
     endMonth: "July",
     startYear: 2024,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#74bde9'
   },
   {
     id: 5,
@@ -68,7 +74,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "March",
     endMonth: "March",
     startYear: 2024,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#ffeb5c'
   },
   {
     id: 6,
@@ -78,7 +85,8 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "August",
     endMonth: "February",
     startYear: 2023,
-    endYear: 2024
+    endYear: 2024,
+    bgColor: '#cb9bfb'
   },
   {
     id: 7,
@@ -88,6 +96,7 @@ export const timelineCards: TimelineCard[] = [
     startMonth: "May",
     endMonth: "January",
     startYear: 2022,
-    endYear: 2023
+    endYear: 2023,
+    bgColor: '#ff995f'
   },
 ];
