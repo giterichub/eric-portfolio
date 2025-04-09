@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import YearCarousel from '../components/YearCarousel';
 import useViewport from '../hooks/useViewport'
 import useHorizontalScroll from '../hooks/useHorizontalScroll';
+import { GrGamepad } from 'react-icons/gr';
 
 const Timeline = () => {
   const [currentYear, setCurrentYear] = useState(2025);
@@ -112,6 +113,7 @@ const Timeline = () => {
                      {card.startMonth.substring(0, 3)} {card.startYear} – {card.endMonth.substring(0, 3)} {card.endYear}
                     </span>
                   </div>
+                  <GrGamepad/>
                   <h3>{card.designation}</h3>
                 </div>
                 <ul>

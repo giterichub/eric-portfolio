@@ -1,3 +1,6 @@
+import { GrGamepad } from "react-icons/gr";
+import { IconType } from "react-icons/lib";
+
 export interface TimelineCard {
   id: number;
   title: string;
@@ -9,6 +12,7 @@ export interface TimelineCard {
   startYear: number;
   endYear: number;
   bgColor: string;
+  icon: IconType;
 }
 
 export const timelineCards: TimelineCard[] = [
@@ -22,7 +26,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "March",
     startYear: 2025,
     endYear: 2025,
-    bgColor: '#f6d465'
+    bgColor: '#f6d465',
+    icon: GrGamepad
   },
   {
     id: 2,
@@ -34,7 +39,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "December",
     startYear: 2024,
     endYear: 2024,
-    bgColor: '#f0523c'
+    bgColor: '#f0523c',
+    icon: GrGamepad
   },
   {
     id: 3,
@@ -46,7 +52,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "July",
     startYear: 2024,
     endYear: 2024,
-    bgColor: '#feb0e1'
+    bgColor: '#feb0e1',
+    icon: GrGamepad
   },
   {
     id: 4,
@@ -58,7 +65,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "October",
     startYear: 2024,
     endYear: 2024,
-    bgColor: '#13af71'
+    bgColor: '#13af71',
+    icon: GrGamepad
   },
   {
     id: 5,
@@ -70,7 +78,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "July",
     startYear: 2024,
     endYear: 2024,
-    bgColor: '#74bde9'
+    bgColor: '#74bde9',
+    icon: GrGamepad
   },
   {
     id: 5,
@@ -82,7 +91,8 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "March",
     startYear: 2024,
     endYear: 2024,
-    bgColor: '#ffeb5c'
+    bgColor: '#ffeb5c',
+    icon: GrGamepad
   },
   {
     id: 6,
@@ -94,18 +104,20 @@ export const timelineCards: TimelineCard[] = [
     endMonth: "February",
     startYear: 2023,
     endYear: 2024,
-    bgColor: '#cb9bfb'
+    bgColor: '#cb9bfb',
+    icon: GrGamepad
   },
   {
     id: 7,
     title: "Paexskin Pvt. Ltd",
     designation: "Frontend Developer",
     location: "Pune",
-    content: ["Software maintenance of the company’s entire product codebase", "Enhanced the responsiveness of the product", "Independent development and integration of a Chat-Bot prototype from scratch", "Developed custom Moodle plugins and themes"],
+    content: ["Software maintenance of the company’s entire product codebase", "Enhanced product responsiveness", "Independent development and integration of a Chat-Bot prototype from scratch", "Developed custom Moodle plugins and themes"],
     startMonth: "May",
     endMonth: "January",
     startYear: 2022,
     endYear: 2023,
-    bgColor: '#ff995f'
+    bgColor: '#ff995f',
+    icon: GrGamepad
   },
 ];
