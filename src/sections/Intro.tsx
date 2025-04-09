@@ -84,10 +84,11 @@ const Home = () => {
       </div>
 
       <div className="content">
-        <h1>Eric Antao</h1>
+        <h1>Eric</h1><br/>
+        <h1 className="surname">Antao</h1>
         <h2>Frontend Developer</h2>
       </div>
-      <div className="styled-box"></div>
+      {/* <div className="styled-box"></div> */}
 
       {/* SVG: Overlapping Triangles */}
       <div className="ov-triangle-container">

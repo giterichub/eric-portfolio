@@ -15,23 +15,40 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/backgrounds/background-1.webp');
+    /* background-image: url('../assets/backgrounds/background-1.webp');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
+    background-repeat: no-repeat; */
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: pulseGridSize 4s ease-in-out infinite;
+      z-index: -1;
+    background-color: #FFFFFF;
 }
-
+@keyframes pulseGridSize {
+    0%, 100% {
+      background-size: 20px 20px;
+    }
+    50% {
+      background-size: 30px 30px;
+    }
+  }
 /* Content */
 .content {
     position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    color: #d21338;
+    color: #0e0d0d;
     font-family: 'Archivo Narrow', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 5vw;
-    left: 11%;
+    font-size: 13vw;
+    text-transform: uppercase;
+}
+.content .surname{
+    margin-top: -400px;
 }
 
 /* Styled box with 3-sided creamish border */
@@ -108,7 +125,8 @@
     margin-bottom: 15px;
   }
   .strip{
-    background-color: #FFFDD0;
+    /* background-color: #FFFDD0; */
+    background-color: #161614;
     width: 20px;
     height: 25vh;
     display: inline-block;
@@ -128,7 +146,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Archivo Narrow', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #5ea7bf;
+    color: #e6ecee;
   }
 
 /* Bottom row */
