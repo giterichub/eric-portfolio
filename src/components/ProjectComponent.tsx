@@ -1,5 +1,6 @@
 import '../styles/projectcomponent.css'
 import { Project } from '../content/projectContent';
+import { techColors } from '../content/projectContent';
 
 interface Props {
     project: Project;
@@ -29,6 +30,13 @@ const ProjectComponent = ({ project }: Props) => {
 
             <div className="case-tile__content">
                 <h2>{project.title}</h2>
+                <span className="tech-badges">
+            {project.technologies.map((tech, index) => (
+              <span key={index} className="tech-badge" style={{ borderColor: techColors[tech] }}>
+                <span className="dot" style={{ backgroundColor: techColors[tech] }}></span> {tech}
+              </span>
+            ))}
+          </span>
                 <h3>{project.description}</h3>
             </div>
         </article>

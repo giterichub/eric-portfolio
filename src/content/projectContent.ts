@@ -2,6 +2,19 @@ import { MdNorthEast } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { IconType } from "react-icons";
 
+export const techColors: { [key: string]: string } = {
+  ReactJS: '#f0523c',
+  JavaScript: '#8CC84B',
+  CSS3: '#2965F1',
+  HTML5: '#F7B731',
+  NodeJS: '#13af71',
+  Python: '#306998',
+  SCSS: '#feb0e1',
+  TypeScript: '#3178C6',
+  JSX: '#F7B731',
+  // Add more technologies and their colors as needed
+};
+
 interface Controls{
     href: string;
     ariaLabel: string;
@@ -46,7 +59,7 @@ export interface Project {
       isFeatured: true,
       showInSlideshow: true,
       backgroundColor: '#2a2a2a',
-      technologies: ['ReactJs', 'Typescript', 'JSX', 'CSS'],
+      technologies: ['ReactJS', 'TypeScript', 'NodeJS', 'JSX', 'CSS3'],
       tileCta: {href: 'https://github.com/giterichub/games-hub', ariaLabel: 'game-hub-repository', title: 'Game Hub Repository', platform: 'Github', icon: FaGithub},
       tileIcon: {href: 'https://game-hub-mu-gold.vercel.app/', ariaLabel: 'game hub', title: 'Game Hub', platform: 'website', icon: MdNorthEast},
     },
@@ -62,7 +75,7 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        technologies: ['Javascript', 'HTML5', 'CSS3'],
+        technologies: ['JavaScript', 'HTML5', 'CSS3'],
         tileCta: {href: 'https://github.com/giterichub/movie-js-app', ariaLabel: 'movie-app-repository', title: 'Movie App', platform: 'Github', icon: FaGithub},
         tileIcon: {href: 'https://movie-app-js-snowy.vercel.app/', ariaLabel: 'movie-app-website', title: 'Movie App Website', platform: 'website', icon: MdNorthEast},
       },
@@ -78,7 +91,7 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        technologies: ['HTML5', 'CSS3', 'Javascript'],
+        technologies: ['HTML5', 'CSS3', 'JavaScript'],
         tileCta: {href: 'https://github.com/giterichub/Crosshair-landing', ariaLabel: 'crosshair-github-repository', title: 'Crosshair Github Repository', platform: 'Github', icon: FaGithub},
         tileIcon: {href: 'https://giterichub.github.io/Crosshair-landing/', ariaLabel: 'crosshair website', title: 'Crosshair', platform: 'website', icon: MdNorthEast},
       },
@@ -94,7 +107,7 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        technologies: ['HTML5', 'CSS3', 'SCSS', 'Javascript'],
+        technologies: ['HTML5', 'CSS3', 'SCSS', 'JavaScript'],
         tileCta: {href: 'https://github.com/giterichub/My-Portfolio', ariaLabel: 'portfolio-github-repository', title: 'Portfolio Github Repository', platform: 'Github', icon: FaGithub},
         tileIcon: {href: 'https://giterichub.github.io/My-Portfolio/', ariaLabel: 'portfolio', title: 'Portfolio', platform: 'website', icon: MdNorthEast},
       },
@@ -110,7 +123,7 @@ export interface Project {
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
-        technologies: ['HTML5', 'CSS3', 'Javascript'],
+        technologies: ['HTML5', 'CSS3', 'JavaScript'],
         tileCta: {href: 'https://github.com/giterichub/gmail-interface-todo-list', ariaLabel: 'gmail-styled-todo-List-github-repository', title: 'Todo-List Github Repository', platform: 'Github', icon: FaGithub},
         tileIcon: {href: 'https://giterichub.github.io/gmail-interface-todo-list/', ariaLabel: 'Gmail Styled Todo-List', title: 'Gmail Styled Todo-List', platform: 'website', icon: MdNorthEast},
       }

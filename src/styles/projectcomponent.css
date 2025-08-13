@@ -129,6 +129,40 @@
     font-weight: 300;
 }
 
+
+/* Add this to your CSS file */
+
+/* Container for tech badges */
+.case-tile__content .tech-badges {
+    display: flex;
+    gap: 1rem;
+    /* margin-top: 0.5rem; */
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+/* Individual tech badge style */
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background */
+    border-radius: 2rem;
+    border: 1px solid transparent; /* Border color will be dynamic */
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* Dot style */
+.tech-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /* background-color: transparent; */
+    margin-right: 0.5rem;
+}
+
+
 /* Desktop Specific Styles */
 @media (min-width: 768px) {
     .project-item {
@@ -151,7 +185,7 @@
 
     .case-tile__content {
         position: absolute;
-        bottom: -30%;
+        /* bottom: -30%; */
         left: 0;
         width: 100%;
         opacity: 0;
@@ -175,7 +209,7 @@
     }
 
     .case-tile:hover .case-tile__content {
-        bottom: 0;
+        top: calc(520px - 12rem - 2.2rem);
         opacity: 1;
     }
 
