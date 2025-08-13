@@ -1,63 +1,78 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 const useHorizontalScroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
-  // Mouse wheel handler
-  const handleWheel = (e: WheelEvent) => {
-    if (scrollRef.current) {
-      const delta = Math.sign(e.deltaY);
-      scrollRef.current.scrollLeft += delta * 20; // Adjust scroll speed
-      e.preventDefault();
-    }
-  };
-
-  // Mouse down handler
-  const startDrag = (e: MouseEvent) => {
-    if (!scrollRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
-  };
-
-  // Mouse move handler
-  const duringDrag = (e: MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust scroll speed
-    scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  // Cleanup dragging
-  const endDrag = () => {
-    setIsDragging(false);
-  };
+  // mutable refs so handlers don't rebind every render
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
 
   useEffect(() => {
-    const element = scrollRef.current;
-    if (!element) return;
-    
-      // Wheel event
-      element.addEventListener('wheel', handleWheel, { passive: false });
-      
-      // Mouse events for dragging
-      element.addEventListener('mousedown', startDrag);
-      element.addEventListener('mousemove', duringDrag);
-      element.addEventListener('mouseup', endDrag);
-      element.addEventListener('mouseleave', endDrag);
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      // convert vertical wheel to horizontal
+      const delta = Math.sign(e.deltaY);
+      el.scrollLeft += delta * 40;
+      e.preventDefault();
+    };
+
+    const startDrag = (e: MouseEvent) => {
+      isDraggingRef.current = true;
+      startXRef.current = e.pageX - el.offsetLeft;
+      scrollLeftRef.current = el.scrollLeft;
+      el.classList.add('grabbing');
+    };
+
+    const duringDrag = (e: MouseEvent) => {
+      if (!isDraggingRef.current) return;
+      e.preventDefault();
+      const x = e.pageX - el.offsetLeft;
+      const walk = (x - startXRef.current) * 2; // drag speed
+      el.scrollLeft = scrollLeftRef.current - walk;
+    };
+
+    const endDrag = () => {
+      isDraggingRef.current = false;
+      el.classList.remove('grabbing');
+    };
+
+    // optional: touch support
+    let touchStartX = 0;
+    let touchStartScrollLeft = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      const t = e.touches[0];
+      touchStartX = t.pageX;
+      touchStartScrollLeft = el.scrollLeft;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches[0];
+      const dx = t.pageX - touchStartX;
+      el.scrollLeft = touchStartScrollLeft - dx;
+    };
+
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    el.addEventListener('mousedown', startDrag);
+    el.addEventListener('mousemove', duringDrag);
+    el.addEventListener('mouseup', endDrag);
+    el.addEventListener('mouseleave', endDrag);
+    el.addEventListener('touchstart', onTouchStart, { passive: true });
+    el.addEventListener('touchmove', onTouchMove, { passive: true });
+    el.addEventListener('touchend', endDrag);
 
     return () => {
-        element.removeEventListener('wheel', handleWheel);
-        element.removeEventListener('mousedown', startDrag);
-        element.removeEventListener('mousemove', duringDrag);
-        element.removeEventListener('mouseup', endDrag);
-        element.removeEventListener('mouseleave', endDrag);
+      el.removeEventListener('wheel', handleWheel);
+      el.removeEventListener('mousedown', startDrag);
+      el.removeEventListener('mousemove', duringDrag);
+      el.removeEventListener('mouseup', endDrag);
+      el.removeEventListener('mouseleave', endDrag);
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchmove', onTouchMove);
+      el.removeEventListener('touchend', endDrag);
     };
-  }, [isDragging, startX, scrollLeft]);
+  }, []);
 
   return scrollRef;
 };

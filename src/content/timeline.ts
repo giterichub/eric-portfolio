@@ -82,7 +82,7 @@ export const timelineCards: TimelineCard[] = [
     icon: GrGamepad
   },
   {
-    id: 5,
+    id: 6,
     title: "Digital Marketing",
     designation: "Wordpress Developer",
     location: "Hyderabad",
@@ -95,7 +95,7 @@ export const timelineCards: TimelineCard[] = [
     icon: GrGamepad
   },
   {
-    id: 6,
+    id: 7,
     title: "Fabiia Ltd",
     designation: "Wordpress Developer",
     location: "London UK",
@@ -108,7 +108,7 @@ export const timelineCards: TimelineCard[] = [
     icon: GrGamepad
   },
   {
-    id: 7,
+    id: 8,
     title: "Paexskin Pvt. Ltd",
     designation: "Frontend Developer",
     location: "Pune",
