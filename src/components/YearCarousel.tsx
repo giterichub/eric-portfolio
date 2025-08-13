@@ -17,7 +17,7 @@ const YearCarousel = ({ currentYear, handleYearChange }: yearCarouselProps) => {
         onClick={() => handleYearChange(1)}
         disabled={currentYear === 2025}
       >
-        {isMobile ? '→' : '↑'}
+        {isMobile ? '←' : '↑'}
       </button>
 
       <div className="year-display">{currentYear}</div>
@@ -28,7 +28,7 @@ const YearCarousel = ({ currentYear, handleYearChange }: yearCarouselProps) => {
         onClick={() => handleYearChange(-1)}
         disabled={currentYear === 2014}
       >
-        {isMobile ? '←' : '↓'}
+        {isMobile ? '→' : '↓'}
       </button>
     </div>
   );
