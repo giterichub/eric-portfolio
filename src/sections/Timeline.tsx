@@ -56,7 +56,7 @@ const Timeline = () => {
       const deltaLeft = cardRect.left - containerRect.left;
 
       container.scrollTo({
-        left: container.scrollLeft + deltaLeft,
+        left: container.scrollLeft + deltaLeft - 50,
         behavior: 'smooth',
       });
 
