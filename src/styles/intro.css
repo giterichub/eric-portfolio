@@ -39,17 +39,30 @@
 /* Content */
 .content {
     position: absolute;
-    top: 63%;
+    /* top: 73%;
+    left: 50%; */
+    top: 55%; /* Center vertically */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     color: #0e0d0d;
     font-family: 'Archivo Narrow', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 13vw;
+    font-size: 9vw;
     text-transform: uppercase;
+    /* text-align: center; */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .content .surname{
-    margin-top: -400px;
+    margin-top: -260px;
+}
+
+.content h2 {
+    font-size: 3vw; /* Adjusted size for Frontend */
+    font-weight: lighter; /* Lighter weight for description */
+    letter-spacing: 1px; /* Tightened letter spacing */
+    margin-top: -50px; /* Spacing between the surname and description */
+    color: #333; /* Slightly darker for contrast */
 }
 
 /* Styled box with 3-sided creamish border */

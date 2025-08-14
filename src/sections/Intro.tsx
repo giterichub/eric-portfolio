@@ -4,7 +4,7 @@ import AnimatedCircleButton from "../components/AnimatedCircleButton";
 import ContactForm from "../components/ContactForm";
 import { useState } from "react";
 
-const Home = () => {
+const Intro = () => {
   const [showForm, setShowForm] = useState(false);
   const handleButtonClick = () => {
     setShowForm(true); // Show the ContactForm when button is clicked
@@ -120,4 +120,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Intro;
