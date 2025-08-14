@@ -6,38 +6,56 @@ import ContactForm from '../components/ContactForm';
 const Contact = () => {
   const [showForm, setShowForm] = useState(false);
   return (
-    <div id="contact" className="section section5">
-      <div className="contact-container">
-        <div className='contact-header'>
-          <h1>SAY HELLO</h1>
-        </div>
+    <main className="main-contact page-contact">
+    <section id="shopify-section-contact-title" className="ctt-title">
+  <div className="ctt-title__hold">
+    <h1 className="big-t">
+      <span className="t t1">Drop us</span>
+      <span className="t t2">A Line</span>
+    </h1>
+  </div>
+</section>
 
-        <div className="next-step-container">
-          <div className="pulsating-circle">
-            <button className="next-step-btn" onClick={() => setShowForm(true)}>
-              NEXT STEP
-            </button>
-          </div>
-          {showForm && <ContactForm onClose={() => setShowForm(false)} />}
-        </div>
+    <section id="shopify-section-contact-location">
+        <h2>Location</h2>
+        <p className="ctt-location__address">123 Main Street, New York, NY</p>
+        <a href="https://maps.google.com" className="ctt-location__address" target="_blank">View on Map</a>
+    </section>
 
-        <div className='footer'>
-          <div className="social-links">
-          {contactContent.socialLinks.map((item, index) => (
-            <a key={index} href={item.url} target='-blank' rel="noopener noreferrer">{item.name}</a> 
-          ))}
-          </div>
+    <section id="shopify-section-contact-ctt">
+        <h2>Get in Touch</h2>
+        <ul className="ctt-links__items">
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li><a href="tel:+123456789">+1 (234) 567-89</a></li>
+        </ul>
+    </section>
 
-          <hr className="section-divider" />
-          <div className="footer-links">
-            <a href="#">Eric Antao</a>
-            <span>|</span>
-            <span>2025</span>
-          </div>
+    <section id="shopify-section-contact-hours">
+        <h2>Hours</h2>
+        <ul className="ctt-hours__list">
+            <li className="ctt-hours__each"><span>Mon–Fri</span><span>9am – 6pm</span></li>
+            <li className="ctt-hours__each"><span>Sat</span><span>10am – 4pm</span></li>
+            <li className="ctt-hours__each"><span>Sun</span><span>Closed</span></li>
+        </ul>
+    </section>
+
+    <section id="shopify-section-contact-socials">
+        <h2>Follow Us</h2>
+        <ul className="ctt-social__items">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </section>
+
+    <section id="shopify-section-contact-text" className="ctt-text">
+        <div className="ctt-text__hold e-hold">
+            <div className="ctt-text__text">
+                We are happy to assist you with any inquiries. Reach out to us through phone, email, or visit us during our working hours.
+            </div>
         </div>
-        
-      </div>
-    </div>
+    </section>
+</main>
   );
 };
 
