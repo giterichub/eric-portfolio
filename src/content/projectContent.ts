@@ -41,9 +41,11 @@ export interface Project {
   }
   
   export const slideshowImages = [
-    'https://images.unsplash.com/photo-1741290723082-bd54c16a21a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1730032452988-c8d4df1256c5?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1741070487520-907d1359cb95?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    '/assets/images/game-hub-2.webp',
+    '/assets/images/movie-app-1.webp',
+    '/assets/images/shopping-2.jpg',
+    '/assets/images/portfolio-1.PNG',
+    '/assets/images/todo-list-3.webp'
     // All images including those not in projects
   ];
   
@@ -72,7 +74,7 @@ export interface Project {
           'https://.../proj1-1.jpg',
           'https://.../proj1-2.jpg'
         ],
-        featuredImage: 'https://cdn.dribbble.com/userupload/8252035/file/original-e9d021f55dc91ca7e8edcd3f88f65d7a.png?resize=1024x768&vertical=center',
+        featuredImage: '/assets/images/movie-app-1.webp',
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
@@ -88,7 +90,7 @@ export interface Project {
           'https://.../proj1-1.jpg',
           'https://.../proj1-2.jpg'
         ],
-        featuredImage: 'https://images.unsplash.com/photo-1545912656-922de67c0b36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
+        featuredImage: '/assets/images/shopping-2.jpg',
         isFeatured: true,
         showInSlideshow: true,
         backgroundColor: '#2a2a2a',
