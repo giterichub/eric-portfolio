@@ -7,6 +7,7 @@ interface Props {
 }
 
 const ProjectComponent = ({ project }: Props) => {
+    
     return (
         <div className="project-item" style={{backgroundColor: project.backgroundColor}}>
         <article className="case-tile">
