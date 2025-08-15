@@ -98,6 +98,7 @@ html, body {
     display: grid;
     grid-template-rows: subgrid; /* modern browsers */
     padding: 3.7rem 0 0 1.5rem;
+    border-top: 1px solid #ffffff;
   }
 
   /* Transparent layout for wrapping spans */
@@ -127,6 +128,11 @@ html, body {
     align-self: start;
   }
 
+  #contact-location, #contact-git, #contact-hours, #contact-socials{
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+  }
+
   #contact-location {
     grid-area: location;
     padding: 3.7rem 2rem 0;
@@ -150,7 +156,18 @@ html, body {
   #contact-text {
     grid-area: text;
     padding: 5.3rem 2.5rem 0;
-    border-top: 1px solid var(--dark);
+    border-top: 1px solid #ffffff;
+  }
+  .contact-header{
+    font-size: 2.3rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
   }
 }
 
