@@ -1,83 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Questrial&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&family=Space+Grotesk:wght@300..700&family=Teko:wght@300..700&display=swap');
-
 /* Base section styling */
 .section1 {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Background image */
 .section1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-image: url('../assets/backgrounds/background-1.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
   background-size: 20px 20px;
   animation: pulseGridSize 4s ease-in-out infinite;
-      z-index: -1;
-    background-color: #FFFFFF;
+  z-index: -1;
+  background-color: #ffffff;
 }
 @keyframes pulseGridSize {
-    0%, 100% {
-      background-size: 20px 20px;
-    }
-    50% {
-      background-size: 30px 30px;
-    }
+  0%,
+  100% {
+    background-size: 20px 20px;
   }
-/* Content */
-.content {
-    position: absolute;
-    /* top: 73%;
-    left: 50%; */
-    top: 55%; /* Center vertically */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    color: #0e0d0d;
-    font-family: 'Archivo Narrow', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 9vw;
-    text-transform: uppercase;
-    /* text-align: center; */
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  50% {
+    background-size: 30px 30px;
+  }
 }
-.content .surname{
-    margin-top: -260px;
+
+.content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #0e0d0d;
+  font-size: 9vw;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.content .surname {
+  margin-top: -260px;
 }
 
 .content h2 {
-    font-size: 3vw; /* Adjusted size for Frontend */
-    font-weight: lighter; /* Lighter weight for description */
-    letter-spacing: 1px; /* Tightened letter spacing */
-    margin-top: -50px; /* Spacing between the surname and description */
-    color: #333; /* Slightly darker for contrast */
+  font-size: 3vw;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-top: -50px; /* Spacing between the surname and description */
+  color: #333;
 }
 
 /* Styled box with 3-sided creamish border */
 .styled-box {
-    position: absolute;
-    display: block;
-    top: 3%;
-    right: 0;
-    width: 57%;
-    height: 95%;
-    background-color: #5ea7bf;
-    border-left: 20px solid #ccc0ab;
-    border-top: 20px solid #ccc0ab;
-    border-bottom: 20px solid #ccc0ab;
-    z-index: 1;
+  position: absolute;
+  display: block;
+  top: 3%;
+  right: 0;
+  width: 57%;
+  height: 95%;
+  background-color: #5ea7bf;
+  border-left: 20px solid #ccc0ab;
+  border-top: 20px solid #ccc0ab;
+  border-bottom: 20px solid #ccc0ab;
+  z-index: 1;
 }
 
 /* All the strips code */
@@ -126,258 +120,259 @@
 } */
 
 /* Animated Vertical Strips Start */
-.strips-container{
-    height: 100vh;
-    width: 30%;
-    position: absolute;
-    left: 1%;
-  }
-  
-  .row{
-    display: block;
-    position: relative;
-    margin-bottom: 15px;
-  }
-  .strip{
-    /* background-color: #FFFDD0; */
-    background-color: #161614;
-    width: 20px;
-    height: 25vh;
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(0); /* Initial position before animation */
-    animation: 0.5s forwards;
-  }
-  .strip p {
-    margin-top: 280px;
-    transform: rotate(-90deg);
-    text-align: left;
-    white-space: nowrap;
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-family: 'Archivo Narrow', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #e6ecee;
-  }
+.strips-container {
+  height: 100vh;
+  width: 30%;
+  position: absolute;
+  left: 1%;
+}
+
+.row {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+}
+.strip {
+  /* background-color: #FFFDD0; */
+  background-color: #161614;
+  width: 20px;
+  height: 25vh;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(0); /* Initial position before animation */
+  animation: 0.5s forwards;
+}
+.strip p {
+  margin-top: 280px;
+  transform: rotate(-90deg);
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e6ecee;
+}
 
 /* Bottom row */
 .row.bottom .strip {
-    height: 47vh;
-    animation-name: slideUp;
+  height: 47vh;
+  animation-name: slideUp;
 }
-.row .strip:nth-child(2), .row .strip:nth-child(3) {
-    margin-left: 15px;
+.row .strip:nth-child(2),
+.row .strip:nth-child(3) {
+  margin-left: 15px;
 }
 
 /* Middle and top rows */
 .row.middle .strip,
 .row.top .strip {
-    height: 21.25vh; /* 25% of 45vh */
-    animation-name: slideDown;
+  height: 21.25vh; /* 25% of 45vh */
+  animation-name: slideDown;
 }
 
 @keyframes slideUp {
-    0% {
-        transform: translateY(100vh); /* Start from below the screen */
-        opacity: 0; /* Fully transparent */
-    }
-    100% {
-        transform: translateY(0); /* Move to its final position */
-        opacity: 1; /* Fully visible */
-    }
+  0% {
+    transform: translateY(100vh); /* Start from below the screen */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateY(0); /* Move to its final position */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 /* Keyframes for the middle and top row animations */
 @keyframes slideDown {
-    0% {
-        transform: translateY(-100vh); /* Start from above the screen */
-        opacity: 0; /* Fully transparent */
-    }
-    100% {
-        transform: translateY(0); /* Move to its final position */
-        opacity: 1; /* Fully visible */
-    }
+  0% {
+    transform: translateY(-100vh); /* Start from above the screen */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateY(0); /* Move to its final position */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 /* Bottom row - Apply staggered delay */
 .row.bottom .strip:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 .row.bottom .strip:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .row.bottom .strip:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 /* Middle row - Apply staggered delay */
 .row.middle .strip:nth-child(1) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .row.middle .strip:nth-child(2) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .row.middle .strip:nth-child(3) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 /* Top row - Apply staggered delay */
 .row.top .strip:nth-child(1) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .row.top .strip:nth-child(2) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 .row.top .strip:nth-child(3) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 /* ---- Animated Vertical Strips END ---- */
 
-
 /* SVG-animated: Overlapping Circles START */
-.ov-circle-container{
-    position: absolute;
-    bottom: -10%;
-    left: 15%;
+.ov-circle-container {
+  position: absolute;
+  bottom: -10%;
+  left: 15%;
 }
 
 @keyframes moveRight {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(10px, -5px); }
-    100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .overlap-circle {
-    animation: moveRight 1.5s ease-in-out infinite;
+  animation: moveRight 1.5s ease-in-out infinite;
 }
 
 .overlap-circle:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 .overlap-circle:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .overlap-circle:nth-child(3) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .overlap-circle:nth-child(4) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .overlap-circle:nth-child(5) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 /* ---- SVG-animated: Overlapping Circles END ---- */
 
-
 /* SVG-animated: Zig-Zag lines Start */
 .zigzag-container {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    top: -40px;
-    left: 15%;
-    z-index: 2;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -40px;
+  left: 15%;
+  z-index: 2;
 }
 
 .zigzag-line {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .zig-zag-circle {
-    fill: black;
+  fill: black;
 }
 
 polyline {
-    stroke: black;
-    stroke-width: 3;
-    fill: none;
-    stroke-dasharray: 5,5;
-    marker-end: url(#arrowhead);
+  stroke: black;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 5, 5;
+  marker-end: url(#arrowhead);
 }
 
 marker path {
-    fill: black;
+  fill: black;
 }
 
 /* ---- SVG-animated: Zig-Zag lines End ---- */
 
 /* SVG: Overlapping Triangles START */
-.ov-triangle-container{
-    position: absolute;
-    top: -8%;
-    right: 35%;
-    z-index: 2;
+.ov-triangle-container {
+  position: absolute;
+  top: -8%;
+  right: 35%;
+  z-index: 2;
 }
 /* ---- SVG: Overlapping Triangles END ---- */
 
-
 /* Animated: Horizontal Strips START */
 
-.h-strips-container{
-    height: 50vh;
-    width: 10%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    right: 50px;
-    top: 15%;
-    z-index: 2;
- }
-.hstrip{
-    background-color: #000000;
-    width: 100px;
-    height: 18px;
-    position: relative;
-    margin-bottom: 20px;
-    opacity: 0; 
-    transform: translateY(0); 
-    animation: slideLower 0.5s forwards;
+.h-strips-container {
+  height: 50vh;
+  width: 10%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 50px;
+  top: 15%;
+  z-index: 2;
+}
+.hstrip {
+  background-color: #000000;
+  width: 100px;
+  height: 18px;
+  position: relative;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(0);
+  animation: slideLower 0.5s forwards;
+}
+
+@keyframes slideLower {
+  0% {
+    transform: translateY(-100vh); /* Start from above the screen */
+    opacity: 0; /* Fully transparent */
   }
- 
-  @keyframes slideLower {
-    0% {
-        transform: translateY(-100vh); /* Start from above the screen */
-        opacity: 0; /* Fully transparent */
-    }
-    100% {
-        transform: translateY(0); /* Move to its final position */
-        opacity: 1; /* Fully visible */
-    }
+  100% {
+    transform: translateY(0); /* Move to its final position */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 .hstrip:nth-child(1) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .hstrip:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .hstrip:nth-child(3) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .hstrip:nth-child(4) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .hstrip:nth-child(5) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .hstrip:nth-child(6) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 /* ---- Animated: Horizontal Strips END ---- */
 
-
-
-.circle-rotate-container{
-    position: absolute;
-    bottom: 3%;
-    right: 3%;
-    z-index: 1;
+.circle-rotate-container {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  z-index: 1;
 }
