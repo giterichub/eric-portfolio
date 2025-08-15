@@ -18,7 +18,7 @@ const Contact = () => {
 
     <section id="contact-location">
       <div className='contact-content'>
-        <h2>Location</h2>
+        <h2 className='contact-header'>Location</h2>
         <p className="ctt-location__address">123 Main Street, New York, NY</p>
         <a href="https://maps.google.com" className="ctt-location__address" target="_blank">View on Map</a>
       </div>
@@ -26,7 +26,7 @@ const Contact = () => {
 
     <section id="contact-git">
       <div className='contact-content'>
-        <h2>Get in Touch</h2>
+        <h2 className='contact-header'>Get in Touch</h2>
         <ul className="ctt-links__items">
             <li><a href="mailto:info@example.com">info@example.com</a></li>
             <li><a href="tel:+123456789">+1 (234) 567-89</a></li>
@@ -36,7 +36,7 @@ const Contact = () => {
 
     <section id="contact-hours">
       <div className='contact-content'>
-        <h2>Hours</h2>
+        <h2 className='contact-header'>Hours</h2>
           <ul className="ctt-hours__list">
               <li className="ctt-hours__each"><span>Mon–Fri</span><span>9am – 6pm</span></li>
               <li className="ctt-hours__each"><span>Sat</span><span>10am – 4pm</span></li>
@@ -47,7 +47,7 @@ const Contact = () => {
 
     <section id="contact-socials">
       <div className='contact-content'>
-      <h2>Follow Us</h2>
+      <h2 className='contact-header'>Follow Us</h2>
         <ul className="ctt-social__items">
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Facebook</a></li>
