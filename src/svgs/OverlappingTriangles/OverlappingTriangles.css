@@ -1,0 +1,6 @@
+.ov-triangle-container {
+    position: absolute;
+    top: -8%;
+    right: 35%;
+    z-index: 2;
+  }
