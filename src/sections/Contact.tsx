@@ -19,9 +19,9 @@ const Contact = () => {
 
         <section id="contact-location">
           <div className="contact-content">
-            <h2 className="contact-header">Location</h2>
+            <h2 className="contact-header">{contactContent.location.locationTitle}</h2>
             <p className="ctt-location__address">
-              123 Main Street, New York, NY
+            {contactContent.location.address}
             </p>
             <a
               href="https://maps.google.com"
@@ -35,13 +35,13 @@ const Contact = () => {
 
         <section id="contact-git">
           <div className="contact-content">
-            <h2 className="contact-header">Get in Touch</h2>
+            <h2 className="contact-header">{contactContent.getInTouch.getInTouchTitle}</h2>
             <ul className="ctt-links__items">
               <li>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <a href={`mailto:${contactContent.getInTouch.email}`}>{contactContent.getInTouch.email}</a>
               </li>
               <li>
-                <a href="tel:+123456789">+1 (234) 567-89</a>
+                <a href={`tel:${contactContent.getInTouch.phone}`}>{contactContent.getInTouch.phone}</a>
               </li>
             </ul>
           </div>
@@ -49,37 +49,27 @@ const Contact = () => {
 
         <section id="contact-hours">
           <div className="contact-content">
-            <h2 className="contact-header">Hours</h2>
+            <h2 className="contact-header">{contactContent.hours.hoursTitle}</h2>
             <ul className="ctt-hours__list">
-              <li className="ctt-hours__each">
-                <span>Mon–Fri</span>
-                <span>9am – 6pm</span>
-              </li>
-              <li className="ctt-hours__each">
-                <span>Sat</span>
-                <span>10am – 4pm</span>
-              </li>
-              <li className="ctt-hours__each">
-                <span>Sun</span>
-                <span>Closed</span>
-              </li>
+              {contactContent.hours.allHours.map((h, idx) => (
+                <li key={idx} className="ctt-hours__each">
+                  <span>{h.day}</span>
+                  <span>{h.time}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
         <section id="contact-socials">
           <div className="contact-content">
-            <h2 className="contact-header">Follow Us</h2>
+            <h2 className="contact-header">{contactContent.socials.socialsTitle}</h2>
             <ul className="ctt-social__items">
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
+              {contactContent.socials.allSocials.map((s, idx) => (
+                <li key={idx}>
+                  <a href={s.url}>{s.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
@@ -87,8 +77,7 @@ const Contact = () => {
         <section id="contact-text" className="ctt-text">
           <div className="ctt-text__hold e-hold">
             <div className="ctt-text__text">
-              We are happy to assist you with any inquiries. Reach out to us
-              through phone, email, or visit us during our working hours.
+              {contactContent.description}
             </div>
           </div>
         </section>
