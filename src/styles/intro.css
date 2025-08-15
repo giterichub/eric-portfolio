@@ -42,7 +42,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   color: #0e0d0d;
-  font-size: 9vw;
+  font-size: clamp(3rem, 9vw, 15rem);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -323,4 +323,17 @@
   bottom: 3%;
   right: 3%;
   z-index: 1;
+}
+
+@media (max-width: 480px) {
+    .h-strips-container{
+        display: none;
+    }
+    .content{
+        transform: translate(-30%, -50%);
+        font-size: clamp(3.3rem, 9vw, 15rem);
+    }
+    .content h2 {
+        font-size: 7vw;
+    }
 }
