@@ -37,7 +37,7 @@
 
 .content {
   position: absolute;
-  top: 55%;
+  top: 58vh;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -47,15 +47,17 @@
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.content .surname {
-  margin-top: -260px;
-}
+
+.content h1 {
+    display: inline-block;
+    line-height: 0.6;
+  }
 
 .content h2 {
   font-size: 3vw;
-  font-weight: lighter;
+  font-weight: 200;
   letter-spacing: 1px;
-  margin-top: -50px; /* Spacing between the surname and description */
+  line-height: 0.6;
   color: #333;
 }
 

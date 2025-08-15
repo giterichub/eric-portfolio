@@ -49,7 +49,7 @@ const Intro = () => {
       </div>
 
       <div className="content">
-        <h1>{bannerContent.name}</h1><br/>
+        <h1 className="firstname">{bannerContent.name}</h1>
         <h1 className="surname">{bannerContent.surname}</h1>
         <h2>{bannerContent.subtext}</h2>
       </div>
