@@ -1,5 +1,6 @@
 import "../styles/intro.css";
 import "../assets/backgrounds/background-hero-merged.webp";
+import { bannerContent } from "../content/intro";
 import AnimatedCircleButton from "../components/AnimatedCircleButton";
 import ContactForm from "../components/ContactForm";
 import DottedZigZagLines from "../svgs/DottedZigZagLines/DottedZigZagLines";
@@ -48,9 +49,9 @@ const Intro = () => {
       </div>
 
       <div className="content">
-        <h1>Eric</h1><br/>
-        <h1 className="surname">Antao</h1>
-        <h2>Frontend Developer</h2>
+        <h1>{bannerContent.name}</h1><br/>
+        <h1 className="surname">{bannerContent.surname}</h1>
+        <h2>{bannerContent.subtext}</h2>
       </div>
       {/* <div className="styled-box"></div> */}
 
