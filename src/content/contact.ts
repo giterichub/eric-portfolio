@@ -1,10 +1,21 @@
 export const contactContent = {
-    socialLinks: [
-      { name: "LinkedIn", url: "https://www.linkedin.com/in/eric-antao/" },
-      { name: "Github", url: "https://github.com/giterichub" },
-      { name: "Portfolio", url: "https://giterichub.github.io/My-Portfolio/" },
-      { name: "ericantao99@gmail.com", url: "mailto:ericantao99@gmail.com" },
-      { name: "+91 7798685915", url: "tel:+917798685915" },
-    ]
-  };
-  
+  location: {
+    address: "123 Main Street, New York, NY"
+  },
+  getInTouch: {
+    email: "info@example.com",
+    phone: "+1 (234) 567-89"
+  },
+  hours: [
+    { day: "Mon–Fri", time: "9am – 6pm" },
+    { day: "Sat", time: "10am – 4pm" },
+    { day: "Sun", time: "Closed" }
+  ],
+  socials: [
+    { name: "Instagram", url: "#" },
+    { name: "Facebook", url: "#" },
+    { name: "Twitter", url: "#" }
+  ],
+  description:
+    "We are happy to assist you with any inquiries. Reach out to us through phone, email, or visit us during our working hours."
+};
