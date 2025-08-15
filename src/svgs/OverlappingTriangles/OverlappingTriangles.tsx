@@ -1,3 +1,4 @@
+import "./OverlappingTriangles.css";
 const OverlappingTriangles = () => {
     return (
         <svg width="200" height="200" viewBox="0 0 100 200">

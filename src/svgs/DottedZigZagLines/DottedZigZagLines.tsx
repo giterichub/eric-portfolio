@@ -1,3 +1,4 @@
+import "./DottedZigZagLines.css";
 const DottedZigZagLines = () => {
     return (
         <svg className="zigzag-line" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">

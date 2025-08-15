@@ -1,3 +1,4 @@
+import "./OverlappingCircles.css";
 const OverlappingCircles = () => {
     return (
             <svg width="200" height="200" viewBox="0 0 200 200">
