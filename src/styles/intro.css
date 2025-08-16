@@ -1,4 +1,7 @@
 /* Base section styling */
+:root{
+    --setWindowHeight: 0px;
+}
 .section1 {
   height: 100vh;
   width: 100%;
@@ -147,7 +150,7 @@
   animation: 0.5s forwards;
 }
 .strip p {
-  margin-top: 280px;
+  margin-top: var(--margin-height);
   transform: rotate(-90deg);
   text-align: left;
   white-space: nowrap;

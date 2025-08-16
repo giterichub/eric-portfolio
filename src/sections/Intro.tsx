@@ -6,13 +6,35 @@ import ContactForm from "../components/ContactForm";
 import DottedZigZagLines from "../svgs/DottedZigZagLines/DottedZigZagLines";
 import OverlappingCircles from "../svgs/OverlappingCircles/OverlappingCircles";
 import OverlappingTriangles from "../svgs/OverlappingTriangles/OverlappingTriangles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Intro = () => {
   const [showForm, setShowForm] = useState(false);
   const handleButtonClick = () => {
     setShowForm(true); // Show the ContactForm when button is clicked
   };
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const defaultMargin = 280;
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+      document.documentElement.style.setProperty("--viewport-height", `${viewportHeight}px`);
+      if(viewportHeight == 651){
+        document.documentElement.style.setProperty("--margin-height", `${defaultMargin}px`);
+      } else {
+        document.documentElement.style.setProperty("--margin-height", `${ ((viewportHeight - 651)/2 + 280) -14 }px`);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    // Ensure it sets on initial load too
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div id="home" className="section section1">
 
