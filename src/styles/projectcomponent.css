@@ -240,6 +240,10 @@
     .case-tile:hover .case-tile__content {
         top: calc(100% - 23.5rem + 1rem);
     }
+    .case-tile__controls {
+        top: 2em;
+        right: 2.6rem;
+    }
 }
 
 /* Mobile Adjustments */
