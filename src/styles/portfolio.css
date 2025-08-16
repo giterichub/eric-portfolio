@@ -12,18 +12,14 @@
   --one-unit: 16px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Sofia Sans Condensed", sans-serif;
-}
-
 /* body {
   background: black;
   color: white;
   overflow-x: hidden;
 } */
+ .portfolio-main{
+  padding-top: 4rem;
+ }
 .section4P{
   position: relative;
 }
@@ -46,6 +42,7 @@
 }
 
 .projects-text {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
   font-size: clamp(5rem, 25vw, 47.5rem);
   font-weight: bold;
   text-transform: uppercase;

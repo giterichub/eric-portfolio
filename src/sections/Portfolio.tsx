@@ -79,8 +79,8 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <main id="PAGE_SECTIONSc1dmp" className="c1rIl3">
-      <div id="c1dmp" className="c1dmp-container section4P">
+    <main id="portfolio" className="portfolio-main">
+      <div id="portfolio-inner" className="portfolio-inner-container section4P">
         {/* Projects Section */}
         <section className="projects">
           <div className="projects-wrapper">
