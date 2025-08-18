@@ -357,45 +357,6 @@ a.ctt-location__address {
   }
 } */
 
-/* Tablet Layout */
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  main.main-contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "title-left title-right"
-      "location ctt"
-      "hours socials"
-      "text text";
-    padding-top: 2rem;
-  }
-  
-  #contact-title {
-    grid-area: title-left;
-    padding: 2rem;
-  }
-
-  .title-line {
-    grid-area: title-right;
-    padding: 2rem;
-    font-size: clamp(2rem, 5vw, 5rem);
-    font-weight: bold;
-  }
-
-  #contact-location,
-  #contact-git,
-  #contact-hours,
-  #contact-socials {
-    padding: 2rem;
-  }
-
-  #contact-text {
-    grid-area: text;
-    padding: 3rem 2rem 0;
-    border-top: 1px solid var(--dark);
-  }
-} */
-
 /* Mobile Layout */
 @media (max-width: 767px) {
   main.main-contact {
