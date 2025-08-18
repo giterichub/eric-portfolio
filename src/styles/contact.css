@@ -189,8 +189,152 @@ a.ctt-location__address {
   }
 }
 
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html,body{
+    scrollbar-width: none;
+  }
+
+  main.main-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "location ctt"
+      "hours socials"
+      "text text";
+    padding-top: 2rem;
+  }
+
+  .ctt-title__hold h1.big-t {
+    font-size: clamp(123px, calc(123px + (37 * ( (100vw - 768px) / 256 ))), 160px);
+    text-transform: uppercase;
+    max-width: 100%;
+  }
+
+  #contact-title {
+    grid-area: title;
+    padding: 3rem 2rem;
+    text-align: left;
+  }
+  .t2{
+    margin-left: 1.3rem;
+  }
+
+  #contact-location {
+    grid-area: location;
+    padding: 2rem;
+  }
+
+  #contact-git {
+    grid-area: ctt;
+    padding: 2rem;
+  }
+
+  #contact-hours {
+    grid-area: hours;
+    padding: 2rem;
+  }
+
+  #contact-socials {
+    grid-area: socials;
+    padding: 2rem;
+  }
+
+  #contact-text {
+    grid-area: text;
+    padding: 3rem 2rem 4rem;
+    font-size: clamp(20.8px, calc(20.8px + (10 * ((100vw - 768px) / 256))), 30.8px);
+  }
+  .ctt-text__text {
+    max-width: 700px;
+  }
+  .contact-header{
+    font-size: clamp(30.8px, calc(30.8px + (14 * ((100vw - 768px) / 256))), 44.8px);
+    margin-bottom: 1rem;
+  }
+  .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
+    font-size: clamp(22.8px, calc(22.8px + (6 * ((100vw - 768px) / 256))), 30.4px);
+  }
+  #contact-text, #contact-socials, #contact-hours, #contact-git, #contact-location, #contact-title { 
+    border-top: 1px solid rgb(253, 251, 245);
+  }
+  #contact-socials, #contact-git { 
+    border-left: 1px solid rgb(253, 251, 245);
+  }
+}
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+  main.main-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "location ctt"
+      "hours socials"
+      "text text";
+    padding-top: 2rem;
+  }
+
+  #contact-title {
+    grid-area: title;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  #contact-title .t {
+    display: block;
+  }
+
+  #contact-location {
+    grid-area: location;
+    padding: 2rem;
+  }
+
+  #contact-git {
+    grid-area: ctt;
+    padding: 2rem;
+  }
+
+  #contact-hours {
+    grid-area: hours;
+    padding: 2rem;
+  }
+
+  #contact-socials {
+    grid-area: socials;
+    padding: 2rem;
+  }
+
+  #contact-text {
+    grid-area: text;
+    padding: 3rem 2rem 0;
+    border-top: 1px solid var(--dark);
+  }
+  .t{
+    display: block;
+  }
+  .ctt-title__hold h1.big-t {
+    font-size: clamp(14rem, 5vw, 5rem); 
+    max-width: 100%;
+  }
+  #contact-text {
+    font-size: 1.3rem;
+  }
+  .contact-header{
+    font-size: 1.9rem;
+  }
+  .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
+    font-size: 1.4rem;
+  }
+  #contact-location, #contact-git, #contact-hours, #contact-socials, #contact-text, #contact-title {
+    border-top: 1px solid #24212170;
+  }
+} */
+
 /* Subgrid fallback for browsers without subgrid support */
-@supports not (grid-template-rows: subgrid) {
+/* @supports not (grid-template-rows: subgrid) {
   @media (min-width: 1025px) {
     #contact-title {
       display: flex;
@@ -211,10 +355,10 @@ a.ctt-location__address {
       margin-top: 6vh;
     }
   }
-}
+} */
 
 /* Tablet Layout */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   main.main-contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,7 +369,7 @@ a.ctt-location__address {
       "text text";
     padding-top: 2rem;
   }
-
+  
   #contact-title {
     grid-area: title-left;
     padding: 2rem;
@@ -250,7 +394,7 @@ a.ctt-location__address {
     padding: 3rem 2rem 0;
     border-top: 1px solid var(--dark);
   }
-}
+} */
 
 /* Mobile Layout */
 @media (max-width: 767px) {
@@ -281,5 +425,46 @@ a.ctt-location__address {
   .ctt-text__hold {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .t{
+    display: block;
+  }
+  .ctt-title__hold h1.big-t {
+    font-size: clamp(8rem, 5vw, 5rem); /* responsive size */
+    max-width: 100%;
+  }
+  #contact-text {
+    font-size: 1.3rem;
+  }
+  .contact-header{
+    font-size: 1.9rem;
+  }
+  .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
+    font-size: 1.4rem;
+  }
+  #contact-location, #contact-git, #contact-hours, #contact-socials, #contact-text, #contact-title {
+    border-top: 1px solid #24212170;
+  }
+}
+
+@media (max-width: 380px) {
+  .t{
+    display: block;
+  }
+  .ctt-title__hold h1.big-t {
+    font-size: clamp(6rem, 5vw, 5rem); /* responsive size */
+    max-width: 100%;
+  }
+  #contact-text {
+    font-size: 1.2rem;
+  }
+  .contact-header{
+    font-size: 1.7rem;
+  }
+  .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
+    font-size: 1.2rem;
+  }
+  #contact-location, #contact-git, #contact-hours, #contact-socials, #contact-text, #contact-title {
+    border-top: 1px solid #24212170;
   }
 }
