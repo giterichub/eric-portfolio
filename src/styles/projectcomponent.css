@@ -291,7 +291,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 380px) {
     .case-tile__bg {
         height: 40vh;
     }
