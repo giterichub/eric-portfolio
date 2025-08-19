@@ -158,6 +158,13 @@
   padding: 0.6rem;
 }
 
+.timeline-card:nth-child(1) path,
+.timeline-card:nth-child(4) path,
+.timeline-card:nth-child(6) path,
+.timeline-card:nth-child(7) path {
+  stroke-width: 0;
+}
+
 path {
   stroke-width: 1px;
 }
@@ -259,7 +266,7 @@ path {
   }
 
   .timeline-card {
-    min-width: 260px;
+    min-width: 275px;
     padding-left: 30px;
   }
 
@@ -274,6 +281,10 @@ path {
   }
   .timeline-list-content-container ul li {
     font-size: 1.1rem;
+  }
+  .svg-icon svg {
+    width: 5em;
+    height: 5em;
   }
 }
 
