@@ -1,4 +1,9 @@
 import { GrGamepad } from "react-icons/gr";
+import { GrReactjs } from "react-icons/gr";
+import { GrVideo } from "react-icons/gr";
+import { GrJs } from "react-icons/gr";
+import { GrWordpress } from "react-icons/gr";
+import { GrCode } from "react-icons/gr";
 import { IconType } from "react-icons/lib";
 
 export interface TimelineCard {
@@ -27,7 +32,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2025,
     endYear: 2025,
     bgColor: '#f6d465',
-    icon: GrGamepad
+    icon: GrReactjs
   },
   {
     id: 2,
@@ -53,7 +58,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2024,
     endYear: 2024,
     bgColor: '#feb0e1',
-    icon: GrGamepad
+    icon: GrVideo
   },
   {
     id: 4,
@@ -66,7 +71,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2024,
     endYear: 2024,
     bgColor: '#13af71',
-    icon: GrGamepad
+    icon: GrReactjs
   },
   {
     id: 5,
@@ -79,7 +84,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2024,
     endYear: 2024,
     bgColor: '#74bde9',
-    icon: GrGamepad
+    icon: GrJs
   },
   {
     id: 6,
@@ -92,7 +97,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2024,
     endYear: 2024,
     bgColor: '#ffeb5c',
-    icon: GrGamepad
+    icon: GrWordpress
   },
   {
     id: 7,
@@ -105,7 +110,7 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2023,
     endYear: 2024,
     bgColor: '#cb9bfb',
-    icon: GrGamepad
+    icon: GrWordpress
   },
   {
     id: 8,
@@ -118,6 +123,6 @@ export const timelineCards: TimelineCard[] = [
     startYear: 2022,
     endYear: 2023,
     bgColor: '#ff995f',
-    icon: GrGamepad
+    icon: GrCode
   },
 ];

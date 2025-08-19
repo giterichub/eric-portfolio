@@ -132,7 +132,7 @@ const Timeline = () => {
                   </div>
                   
                   <div className='svg-icon'>
-                    <GrGamepad />
+                    <card.icon />
                   </div>
                   
                   
