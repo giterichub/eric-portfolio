@@ -53,24 +53,6 @@
       flex-direction: row;
       gap: 30px;
     }
-  
-    .timeline-container {
-      width: 90%;
-      height: 50vh;
-      right: 50%;
-      transform: translate(50%, -50%);
-      top: 55%;
-      padding: 20px 30px;
-    }
-  
-    .timeline-line {
-      left: 10px;
-    }
-  
-    .timeline-card {
-      min-width: 250px;
-      padding-left: 30px;
-    }
   }
   
   @media (min-width: 769px) {
@@ -84,4 +66,10 @@
     .up-button { order: 1; }
     .year-display { order: 2; }
     .down-button { order: 3; }
+  }
+
+  @media (max-width: 380px) {
+    .year-carousel {
+      top: 12%;
+    }
   }
