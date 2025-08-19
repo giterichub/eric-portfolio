@@ -122,18 +122,28 @@ const Timeline = () => {
                 style={{ background: card.bgColor }}
               >
                 <div className="card-header">
-                  <div className="header-title-year">
-                    <span className="header-titl">{card.title}</span>
-                    <span className="year-range">
-                      {card.startMonth.substring(0, 3)} {card.startYear} – {card.endMonth.substring(0, 3)} {card.endYear}
-                    </span>
+                  <div className='card-header-container'>
+                    <div className="header-title-year">
+                      <span className="header-titl">{card.designation}</span>
+                      <span className="year-range">
+                        {card.startMonth.substring(0, 3)} {card.startYear} – {card.endMonth.substring(0, 3)} {card.endYear}
+                      </span>
+                    </div>
                   </div>
-                  <GrGamepad />
-                  <h3>{card.designation}</h3>
+                  
+                  <div className='svg-icon'>
+                    <GrGamepad />
+                  </div>
+                  
+                  
                 </div>
+                <h3 className='card-h3'>{card.title}</h3>
+                <div className='timeline-list-content-container'>
                 <ul>
                   {card.content.map((item, idx) => <li key={idx}>{item}</li>)}
                 </ul>
+                </div>
+                
               </div>
             ))}
           </div>
