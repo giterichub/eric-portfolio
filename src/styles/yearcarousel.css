@@ -45,27 +45,56 @@
     background: rgba(255,255,255,0.1);
   }
 
-  @media (max-width: 768px) {
-    .year-carousel {
+  @media (max-width: 1024px) {
+    .year-carousel{
       left: 50%;
-      top: 20%;
       transform: translateX(-50%);
       flex-direction: row;
-      gap: 30px;
+      top: 18%;
+      gap: 45px;
     }
-  }
-  
-  @media (min-width: 769px) {
-    .year-carousel {
-      left: 10%;
-      top: 50%;
-      transform: translateY(-50%);
-      flex-direction: column;
+    .year-button {
+      width: 70px;
+      height: 70px;
+      font-size: 2rem;
     }
-  
+    .year-display {
+      font-size: 4.5rem;
+      min-width: 150px;
+    }
     .up-button { order: 1; }
     .year-display { order: 2; }
     .down-button { order: 3; }
+  }
+
+  @media (max-width: 768px){
+    .year-carousel{
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: row;
+      top: 18%;
+      gap: 35px;
+    }
+    .year-button {
+      width: 50px;
+      height: 50px;
+      font-size: 1.8rem;
+    }
+    .year-display {
+      font-size: 3.5rem;
+      min-width: 120px;
+    }
+    .year-button {
+      width: 55px;
+      height: 55px;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .year-carousel {
+      top: 14%;
+    }
   }
 
   @media (max-width: 380px) {

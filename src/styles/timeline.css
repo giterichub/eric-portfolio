@@ -191,16 +191,9 @@ path {
    RESPONSIVE
 ======================== */
 
-@media (max-width: 768px) {
-  .year-carousel {
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    flex-direction: row;
-    gap: 30px;
-  }
-
+@media (max-width: 1024px) {
   .timeline-container {
+    border-radius: 1.5rem;
     top: 55%;
     right: 50%;
     width: 90%;
@@ -214,8 +207,80 @@ path {
   }
 
   .timeline-card {
-    min-width: 250px;
+    min-width: clamp(295px, calc(295px + (75 * ( (100vw - 768px) / 256 ))), 370px);
     padding-left: 30px;
+  }
+  .card-header{
+    gap: 1.6rem;
+  }
+  .header-titl {
+    font-size: clamp(24px, calc(24px + (8 * ( (100vw - 768px) / 256 ))), 32px);
+  }
+  .year-range {
+    font-size: clamp(19.2px, calc(19.2px + (4.8 * ( (100vw - 768px) / 256 ))), 24px);
+  }
+  .card-h3 {
+    font-size: clamp(25.6px, calc(25.6px + (8 * ( (100vw - 768px) / 256 ))), 33.6px);
+  }
+  .timeline-list-content-container ul li {
+    font-size: clamp(19.2px, calc(19.2px + (6.4 * ( (100vw - 768px) / 256 ))), 25.6px);
+  }
+  .svg-icon svg {
+    width: clamp(100.797px, calc(100.797px + (16 * ( (100vw - 768px) / 256 ))), 116.797px);
+    height: clamp(100.797px, calc(100.797px + (16 * ( (100vw - 768px) / 256 ))), 116.797px);
+    padding: 0.8rem;
+  }
+  .card-h3 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .year-carousel {
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 30px;
+  } */
+
+  .timeline-container {
+    border-radius: 1.5rem;
+    top: 55%;
+    right: 50%;
+    width: 90%;
+    height: 50vh;
+    transform: translate(50%, -50%);
+    padding: 20px 30px;
+  }
+
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-card {
+    min-width: 260px;
+    padding-left: 30px;
+  }
+
+  .header-titl {
+    font-size: 1.3rem;
+  }
+  .year-range {
+    font-size: 1.1rem;
+  }
+  .card-h3 {
+    font-size: 1.4rem;
+  }
+  .timeline-list-content-container ul li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container {
+    height: 55vh;
+    top: 52%;
   }
 }
 
