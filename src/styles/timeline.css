@@ -98,6 +98,20 @@
 }
 
 /* Responsive Design */
+
+@media (min-width: 769px) {
+  .year-carousel {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+
+  .up-button { order: 1; }
+  .year-display { order: 2; }
+  .down-button { order: 3; }
+}
+
 @media (max-width: 768px) {
   .year-carousel {
     left: 50%;
@@ -126,15 +140,11 @@
   }
 }
 
-@media (min-width: 769px) {
-  .year-carousel {
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    flex-direction: column;
+@media (max-width: 380px) {
+  .timeline-container {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
   }
-
-  .up-button { order: 1; }
-  .year-display { order: 2; }
-  .down-button { order: 3; }
 }
