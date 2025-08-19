@@ -1,51 +1,64 @@
-.section3{
+/* ========================
+   SECTION 3 BASE
+======================== */
+.section3 {
   position: relative;
   display: block;
 }
-/* Existing styles */
+
+/* ========================
+   TIMELINE WRAPPER
+======================== */
 .timeline-wrapper {
   position: relative;
   display: block;
   height: 100vh;
-  /* background-color: blueviolet; */
   background-color: #20003f;
   overflow: hidden;
 }
 
-/* Timeline Container */
+/* ========================
+   TIMELINE CONTAINER
+======================== */
 .timeline-container {
   position: absolute;
+  top: 50%;
   right: 0;
   width: 75%;
   height: 70vh;
-  top: 50%;
   transform: translateY(-50%);
-  background-color: black;
   padding: 2rem;
-  overflow-x: auto;
+  background-color: black;
   border-top-left-radius: 4rem;
   border-bottom-left-radius: 4rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none; /* Chrome */
 }
 
 .timeline-container:active {
   cursor: grabbing;
 }
 
-.timeline-container::-webkit-scrollbar {
-  display: none;
-}
-
+/* ========================
+   TIMELINE LINE
+======================== */
 .timeline-line {
   position: absolute;
-  left: 20px;
   top: 0;
   bottom: 0;
+  left: 20px;
   width: 2px;
   background: #8a63d2;
 }
 
+/* ========================
+   CARDS WRAPPER
+======================== */
 .cards-wrapper {
   display: flex;
   gap: 2rem;
@@ -54,89 +67,118 @@
   scroll-snap-type: x mandatory;
 }
 
-/* Timeline Cards */
+/* ========================
+   TIMELINE CARD
+======================== */
 .timeline-card {
-  min-width: 300px;
-  height: 100%;
-  /* background: #2a2a2a; */
-  padding: 2rem;
-  border-radius: 12px;
-  color: #000000;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s;
+  min-width: 300px;
+  height: 100%;
+  padding: 2rem;
+  color: #000000;
+  border-radius: 12px;
   scroll-snap-align: start;
+  transition: transform 0.3s;
 }
 
 .timeline-card:hover {
   transform: translateY(-5px);
 }
-.card-header-container{
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-.card-header{
+
+/* ========================
+   CARD HEADER
+======================== */
+.card-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.svg-icon svg{
-  width: 5.3em;
-  height: 5.3em;
-  padding: 0.6rem;
+
+.card-header-container {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
-path{
-  stroke-width: 1px;
+
+.header-title-year {
+  display: flex;
+  flex-direction: column;
 }
-.svg-icon{
+
+.header-titl {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.year-range {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #2a2a2a;
+}
+
+/* ========================
+   CARD TITLE
+======================== */
+.card-h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+
+/* ========================
+   CARD CONTENT
+======================== */
+.timeline-list-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-list-content-container ul li {
+  font-size: 1rem;
+}
+
+/* ========================
+   ICON
+======================== */
+.svg-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid;
   border-radius: 50%;
 }
-.header-titl{
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-.year-range{
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: #2a2a2a;
-}
-.card-h3{
-  margin-top: 1.4rem;
-  margin-bottom: 0.6rem;
-  border-bottom: 1px solid #000000;
-  text-align: left;
-}
-.timeline-list-content-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.timeline-list-content-container ul li{
-  font-size: 1rem;
-}
-.header-title-year{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
+
+.svg-icon svg {
+  width: 5.3em;
+  height: 5.3em;
+  padding: 0.6rem;
 }
 
+path {
+  stroke-width: 1px;
+}
+
+/* ========================
+   DOT
+======================== */
 .card-dot {
   position: absolute;
-  left: -8px;
   top: 15px;
+  left: -8px;
   width: 18px;
   height: 18px;
   background: #8a63d2;
-  border-radius: 50%;
   border: 3px solid white;
+  border-radius: 50%;
 }
 
+/* ========================
+   EXTRA CARD CONTENT
+======================== */
 .card-content {
   background: #2a2a2a;
   padding: 20px;
@@ -145,9 +187,10 @@ path{
   transition: transform 0.3s;
 }
 
-/* Responsive Design */
-
-@media (min-width: 769px) {
+/* ========================
+   RESPONSIVE
+======================== */
+/* @media (min-width: 769px) {
   .year-carousel {
     left: 10%;
     top: 50%;
@@ -170,11 +213,11 @@ path{
   }
 
   .timeline-container {
+    top: 55%;
+    right: 50%;
     width: 90%;
     height: 50vh;
-    right: 50%;
     transform: translate(50%, -50%);
-    top: 55%;
     padding: 20px 30px;
   }
 
@@ -186,13 +229,22 @@ path{
     min-width: 250px;
     padding-left: 30px;
   }
-}
+} */
 
 @media (max-width: 380px) {
   .timeline-container {
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    border-radius: 1.5rem;
+    height: 64vh;
+    top: 56%;
+  }
+  .year-carousel {
+    top: 12%;
+  }
+  .svg-icon svg {
+    width: 4.3em;
+    height: 4.3em;
+  }
+  .card-h3 {
+    margin-top: 1.1rem;
   }
 }
