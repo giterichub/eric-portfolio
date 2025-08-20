@@ -3,11 +3,6 @@
     --barReveal: 0px;
     --bodyAlpha: 0;
 }
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box; 
-}
 
 .scrollExpand {
     opacity: 0;
@@ -87,7 +82,6 @@ box-sizing: border-box;
 }
 .about-statement{
     position: relative;
-    font-size: 90px;
     font-size: clamp(42px, 6.25vw, 90px);
     font-family: "Playfair Display", serif;
     font-weight: 400;
