@@ -198,6 +198,68 @@ path {
    RESPONSIVE
 ======================== */
 
+@media (min-width: 1681px) {
+  .timeline-container{
+    height: 50vh;
+  }
+  .cards-wrapper{
+    min-width: fit-content;
+  }
+  .card-header {
+    gap: 1.7rem;
+  }
+  .timeline-card{
+    min-width: 350px;
+  }
+  .header-titl {
+    font-size: 1.6rem;
+  }
+  .year-range {
+    font-size: 1.1rem;
+  }
+  .svg-icon svg{
+    width: 5.9em;
+    height: 5.9em;
+  }
+  .card-h3{
+    margin-top: 1.7rem;
+    font-size: 1.6rem;
+  }
+  .timeline-list-content-container ul li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .timeline-container{
+    height: 50vh;
+  }
+  
+  .timeline-card{
+    min-width: 410px;
+  }
+  .card-header {
+    gap: 2.5rem;
+  }
+  .header-titl {
+    font-size: 2.1rem;
+  }
+  .year-range {
+    font-size: 1.6rem;
+  }
+  .svg-icon svg{
+    width: 8.3em;
+    height: 8.3em;
+  }
+  .card-h3{
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+  .timeline-list-content-container ul li {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .timeline-container {
     border-radius: 1.5rem;
