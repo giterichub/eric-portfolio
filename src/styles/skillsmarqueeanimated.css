@@ -16,17 +16,18 @@
     padding-right: 5.2083333333vw;
     background-color: #111922;
 }
-.section-title{
-    display: block;
+.skills-section-title{
     text-align: center;
-    font-size: clamp(18px, 2.25vw, 75px);
-    font-family: "Playfair Display", serif;
     padding: 0 0 4rem;
+}
+.skills-section-title h3 {
+  font-size: clamp(18px, 2.25vw, 75px);
+  font-family: "Playfair Display", serif;
 }
 .marquee-container {
     overflow: hidden;
     position: relative;
-    width: 90%;
+    width: 50%;
     padding: 2rem 0;
     background-color: #111922;
   }
@@ -122,7 +123,7 @@
   }
   
   /* Responsive design */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .tech-item {
       min-width: 120px;
       height: 120px;
@@ -132,5 +133,90 @@
     .tech-icon {
       width: 40px;
       height: 40px;
+    }
+  } */
+
+  @media (min-width: 320px) {
+    .about-pageWrap {
+      margin: 0 auto 0;
+    }
+    .marquee-main-container {
+      padding: 2rem 0 7rem;
+      min-height: 30vh;
+    }
+    .skills-section-title {
+      padding: 0 0 1.5rem;
+    }
+    .skills-section-title h3 {
+      font-size: clamp(1.4rem, 2.25vw, 4.7rem);
+    }
+    .marquee-container {
+      width: 90%;
+      padding: 1rem 0;
+    }
+    .tech-item {
+      min-width: 80px;
+      height: 80px;
+      margin: 0 0.6rem;
+    }
+  }
+
+  @media (min-width: 391px) {
+    .skills-section-title h3 {
+      font-size: clamp(1.6rem, 2.25vw, 4.7rem);
+    }
+    .tech-item {
+      min-width: 90px;
+      height: 90px;
+    }
+    .marquee-container {
+      padding: 1.1rem 0;
+    }
+  }
+
+  @media (min-width: 541px){
+    .marquee-main-container {
+      padding: 2rem 0 8rem;
+    }
+    .skills-section-title {
+      padding: 0 0 1.8rem;
+    }
+    .skills-section-title h3 {
+      font-size: clamp(2.8rem, 2.25vw, 4.7rem);
+    }
+    .tech-item {
+      min-width: 100px;
+      height: 100px;
+    }
+    .marquee-container {
+      padding: 1.3rem 0;
+      margin: 0 0.8rem;
+    }
+  }
+
+  @media (min-width: 769px){
+    .marquee-main-container {
+      padding: 2rem 0 9rem;
+    }
+    .skills-section-title {
+      padding: 0 0 2rem;
+    }
+    .skills-section-title h3 {
+      font-size: clamp(49.6px, calc(49.6px + (12.8 * ( (100vw - 768px) / 255 ))), 62.4px);
+    }
+    .tech-item {
+      min-width: 120px;
+      height: 120px;
+    }
+    .tech-icon {
+      width: 55px;
+      height: 55px;
+    }
+    .tech-name {
+      font-size: 1.2rem;
+    }
+    .marquee-container {
+      padding: 1.5rem 0;
+      margin: 0 0.9rem;
     }
   }
