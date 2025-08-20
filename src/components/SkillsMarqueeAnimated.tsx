@@ -6,7 +6,7 @@ const SkillsMarqueeAnimated = () => {
   return (
     <div className="marquee-main-container">
       <div className="about-pageWrap">
-        <div className="section-title">
+        <div className="skills-section-title">
           <h3>Skills and Tools I have used</h3>
         </div>
         <div className="marquee-center-align">
