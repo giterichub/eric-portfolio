@@ -1,0 +1,41 @@
+name: CI/CD - Vite + React + Vercel
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Vercel
+        run: |
+          if [ "${GITHUB_REF##*/}" == "main" ]; then
+            echo "🚀 Deploying to Production..."
+            npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }} \
+              --org ${{ secrets.VERCEL_ORG_ID }} \
+              --project ${{ secrets.VERCEL_PROJECT_ID }}
+          else
+            echo "🧪 Deploying to Staging..."
+            npx vercel --token=${{ secrets.VERCEL_TOKEN }} \
+              --org ${{ secrets.VERCEL_ORG_ID }} \
+              --project ${{ secrets.VERCEL_PROJECT_ID }}
+          fi
