@@ -32,8 +32,8 @@ jobs:
         run: |
           if [ "${GITHUB_REF##*/}" == "main" ]; then
             echo "🚀 Deploying to Production..."
-            npx vercel --prod --token $VERCEL_TOKEN
+            npx vercel --prod --token $VERCEL_TOKEN --yes
           else
             echo "🧪 Deploying to Staging..."
-            npx vercel --token $VERCEL_TOKEN
+            npx vercel --token $VERCEL_TOKEN --yes
           fi
