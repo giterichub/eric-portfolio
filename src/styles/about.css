@@ -96,5 +96,10 @@
     margin-bottom: 30px;
 }
 
-
+@media (min-width: 1025px) {
+    .about-pageWrap {
+      padding-left: 5.5083333333vw;
+      padding-right: 5.5083333333vw;
+    }
+}
 
