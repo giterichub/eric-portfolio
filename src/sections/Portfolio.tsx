@@ -79,7 +79,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <main id="portfolio" className="portfolio-main">
+    <main id="portfolio" className="portfolio-main section">
       <div id="portfolio-inner" className="portfolio-inner-container section4P">
         {/* Projects Section */}
         <section className="projects">
