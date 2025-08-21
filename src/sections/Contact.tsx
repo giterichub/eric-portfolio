@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 const Contact = () => {
   const [showForm, setShowForm] = useState(false);
   return (
-    <div id="contact" className="section5">
+    <div id="contact" className="section section5">
       <main className="main-contact page-contact">
         <section id="contact-title" className="ctt-title">
           <div className="ctt-title__hold">
