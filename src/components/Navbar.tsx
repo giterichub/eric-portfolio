@@ -13,11 +13,21 @@ const Navbar = () => {
         const sectionElement = section as HTMLElement;
         const sectionTop = sectionElement.offsetTop;
         const sectionHeight = sectionElement.clientHeight;
-        const scrollPosition = window.scrollY + window.innerHeight;
+        const scrollTop = window.scrollY;
 
         // Calculate the scroll progress for the section
-        const progress = (scrollPosition - sectionTop) / sectionHeight;
+        let progress: number;
+        if (index === sections.length - 1) {
+          // Special handling for the last section
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          progress = (scrollTop - sectionTop) / (maxScroll - sectionTop);
+        } else {
+          // Normal handling for all other sections
+          progress = (scrollTop - sectionTop) / sectionHeight;
+        }
+
         const progressPercentage = Math.min(Math.max(progress, 0), 1) * 100;
+
 
         // Get the progress bar for each li and cast it to HTMLElement
         const progressBar = navbarLinks.current[index]?.querySelector('.progress-bar') as HTMLElement;
