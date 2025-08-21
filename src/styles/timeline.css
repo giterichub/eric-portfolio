@@ -65,6 +65,7 @@
   height: 100%;
   user-select: none;
   scroll-snap-type: x mandatory;
+  min-width: fit-content;
 }
 
 /* ========================
