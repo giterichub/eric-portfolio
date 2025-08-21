@@ -1,27 +1,27 @@
 export const contactContent = {
   location: {
     locationTitle: 'location',
-    address: "123 Main Street, New York, NY"
+    address: "123 Main Street, Margao, Goa"
   },
   getInTouch: {
     getInTouchTitle: 'get in touch',
-    email: "info@example.com",
-    phone: "+1 (234) 567-89"
+    email: "ericantao99@gmail.com",
+    phone: "+91 7972310647"
   },
   hours: {
     hoursTitle: 'hours',
     allHours: [
-      { day: "Mon–Fri", time: "9am – 6pm" },
-      { day: "Sat", time: "10am – 4pm" },
+      { day: "Mon–Fri", time: "9am – 5pm" },
+      { day: "Sat", time: "Closed" },
       { day: "Sun", time: "Closed" }
     ],
   },
   socials: {
     socialsTitle: 'follow us',
     allSocials: [
-      { name: "Instagram", url: "#" },
-      { name: "Facebook", url: "#" },
-      { name: "Twitter", url: "#" }
+      { name: "LinkedIn", url: "www.linkedin.com/in/eric-antao" },
+      { name: "Github", url: "https://github.com/giterichub" },
+      { name: "Portfolio", url: "#" }
     ],
   },
   description:
