@@ -23,6 +23,7 @@
 .skills-section-title h3 {
   font-size: clamp(18px, 2.25vw, 75px);
   font-family: "Playfair Display", serif;
+  color: #fdfbf5;
 }
 .marquee-container {
     overflow: hidden;
