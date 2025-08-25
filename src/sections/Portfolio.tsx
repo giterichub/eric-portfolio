@@ -90,7 +90,7 @@ const Portfolio = () => {
               </span>
               <span className="projects-text work">
                 <span ref={woRef} className="wo">WO</span>
-                <span className="rect">
+                <div className="rect">
                   <div className="outer-container">
                     <div className="carousel-container">
                       {allSlideshowImages.map((img, index) => (
@@ -103,7 +103,7 @@ const Portfolio = () => {
                       ))}
                     </div>
                   </div>
-                </span>
+                </div>
                 <span ref={rkRef} className="rk">RK</span>
               </span>
             </h1>
