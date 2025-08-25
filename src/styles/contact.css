@@ -86,7 +86,11 @@ a.ctt-location__address {
 .ctt-social__items>li>a:link,
 .ctt-social__items>li>a:visited,
 .ctt-social__items>li>a:hover,
-.ctt-social__items>li>a:active {
+.ctt-social__items>li>a:active,
+.ctt-links__items>li>a:link,
+.ctt-links__items>li>a:visited,
+.ctt-links__items>li>a:hover,
+.ctt-links__items>li>a:active {
   color: #9E9EFF;
 }
 
