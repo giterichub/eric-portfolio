@@ -1,5 +1,4 @@
 import "../styles/intro.css";
-import "../assets/backgrounds/background-hero-merged.webp";
 import { bannerContent } from "../content/intro";
 import AnimatedCircleButton from "../components/AnimatedCircleButton";
 import ContactForm from "../components/ContactForm";
