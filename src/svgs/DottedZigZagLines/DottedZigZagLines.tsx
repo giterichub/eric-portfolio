@@ -4,7 +4,7 @@ const DottedZigZagLines = () => {
         <svg className="zigzag-line" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
           <polyline
             points="120,50 40,200 280,90 120,240 400,180 300,250"
-            stroke="black" fill="none" stroke-width="3" stroke-dasharray="5,5">
+            stroke="black" fill="none" strokeWidth="3" strokeDasharray="5,5">
             <animate
               attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite" />
           </polyline>
