@@ -19,8 +19,16 @@ const Navbar = () => {
         let progress: number;
         if (index === sections.length - 1) {
           // Special handling for the last section
-          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-          progress = (scrollTop - sectionTop) / (maxScroll - sectionTop);
+          const sectionHeight1 = sectionElement.offsetHeight;
+          const sectionBottom = sectionTop + sectionHeight1;
+
+          // Progress = 0 until contact starts appearing
+          if (scrollTop + window.innerHeight >= sectionBottom) {
+            progress = 1;
+          } 
+          else {
+            progress = 0;
+          }
         } else {
           // Normal handling for all other sections
           progress = (scrollTop - sectionTop) / sectionHeight;
