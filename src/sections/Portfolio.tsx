@@ -36,7 +36,9 @@ const Portfolio = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    updateLayout(); // Initial layout
+    document.fonts.ready.then(() => {
+      updateLayout();
+    });
 
     return () => window.removeEventListener('resize', handleResize);
   }, [updateLayout]);
