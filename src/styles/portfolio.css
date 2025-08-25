@@ -61,7 +61,7 @@
 .rect {
   width: var(--rect-width);
   height: var(--rect-height);
-  display: inline-block;
+  display: block;
   transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 

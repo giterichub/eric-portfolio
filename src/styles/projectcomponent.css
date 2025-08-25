@@ -268,7 +268,7 @@
     }
 
     .case-tile__content {
-        height: 40vh;
+        /* height: 40vh; */
         padding: 1.5rem;
         border-radius: 0 0 2rem 2rem;
         /* overflow-y: auto; */
