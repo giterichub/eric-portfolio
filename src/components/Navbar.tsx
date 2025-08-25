@@ -8,6 +8,8 @@ const Navbar = () => {
     const sections = document.querySelectorAll('.section');
 
     const checkScroll = () => {
+      let activeSectionId = "";
+
       sections.forEach((section, index) => {
         // Cast section to HTMLElement to access offsetTop and clientHeight
         const sectionElement = section as HTMLElement;
@@ -42,7 +44,16 @@ const Navbar = () => {
         if (progressBar) {
           progressBar.style.height = `${progressPercentage}%`;
         }
+        if (
+          scrollTop >= sectionTop - window.innerHeight / 2 &&
+          scrollTop < sectionTop + sectionHeight - window.innerHeight / 2
+        ) {
+          activeSectionId = sectionElement.id;
+        }
       });
+      if (activeSectionId && window.location.hash !== `#${activeSectionId}`) {
+        history.replaceState(null, "", `#${activeSectionId}`);
+      }
     };
 
     // Listen for scroll events and trigger checkScroll function
