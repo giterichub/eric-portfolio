@@ -130,10 +130,11 @@
 /* Container for tech badges */
 .case-tile__content .tech-badges {
     display: flex;
-    gap: 1rem;
-    /* margin-top: 0.5rem; */
-    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    overflow: visible;
     align-items: center;
+    gap: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Individual tech badge style */
