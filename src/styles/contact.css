@@ -83,6 +83,13 @@ a.ctt-location__address {
   position: relative;
 }
 
+.ctt-social__items>li>a:link,
+.ctt-social__items>li>a:visited,
+.ctt-social__items>li>a:hover,
+.ctt-social__items>li>a:active {
+  color: #9E9EFF;
+}
+
 /* Desktop Layout */
 @media only screen and (min-width: 1354px) {
   main.main-contact {
@@ -177,8 +184,6 @@ a.ctt-location__address {
   .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
     font-family: 'Playfair Display', serif;
     font-size: clamp(14.4px, calc(14.4px + (22.4 * ( (100vw - 1366px) / 1194 ))), 36.8px);
-    text-decoration: none;
-    color: #ffffff;
   }
 }
 
