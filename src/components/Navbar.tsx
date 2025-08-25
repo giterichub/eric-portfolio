@@ -8,6 +8,8 @@ const Navbar = () => {
     const sections = document.querySelectorAll('.section');
 
     const checkScroll = () => {
+      let activeSectionId = "";
+
       sections.forEach((section, index) => {
         // Cast section to HTMLElement to access offsetTop and clientHeight
         const sectionElement = section as HTMLElement;
@@ -19,8 +21,16 @@ const Navbar = () => {
         let progress: number;
         if (index === sections.length - 1) {
           // Special handling for the last section
-          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-          progress = (scrollTop - sectionTop) / (maxScroll - sectionTop);
+          const sectionHeight1 = sectionElement.offsetHeight;
+          const sectionBottom = sectionTop + sectionHeight1;
+
+          // Progress = 0 until contact starts appearing
+          if (scrollTop + window.innerHeight >= sectionBottom) {
+            progress = 1;
+          } 
+          else {
+            progress = 0;
+          }
         } else {
           // Normal handling for all other sections
           progress = (scrollTop - sectionTop) / sectionHeight;
@@ -34,7 +44,16 @@ const Navbar = () => {
         if (progressBar) {
           progressBar.style.height = `${progressPercentage}%`;
         }
+        if (
+          scrollTop >= sectionTop - window.innerHeight / 2 &&
+          scrollTop < sectionTop + sectionHeight - window.innerHeight / 2
+        ) {
+          activeSectionId = sectionElement.id;
+        }
       });
+      if (activeSectionId && window.location.hash !== `#${activeSectionId}`) {
+        history.replaceState(null, "", `#${activeSectionId}`);
+      }
     };
 
     // Listen for scroll events and trigger checkScroll function
