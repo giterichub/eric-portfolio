@@ -21,7 +21,7 @@ export const contactContent = {
     allSocials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/eric-antao" },
       { name: "Github", url: "https://github.com/giterichub" },
-      { name: "Portfolio", url: "https://eric-portfolio-tawny.vercel.app" }
+      { name: "Portfolio", url: "https://github.com/giterichub/eric-portfolio" }
     ],
   },
   description:
