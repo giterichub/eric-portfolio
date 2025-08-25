@@ -3,12 +3,7 @@ import '../styles/portfolio.css';
 import { projects, slideshowImages } from '../content/projectContent';
 import ProjectComponent from '../components/ProjectComponent';
 
-const allSlideshowImages = [
-  ...new Set([
-    ...slideshowImages,
-    ...projects.flatMap(p => p.showInSlideshow ? p.images : [])
-  ])
-];
+const allSlideshowImages = slideshowImages;
 
 const Portfolio = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
