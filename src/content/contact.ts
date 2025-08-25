@@ -19,9 +19,9 @@ export const contactContent = {
   socials: {
     socialsTitle: 'follow us',
     allSocials: [
-      { name: "LinkedIn", url: "www.linkedin.com/in/eric-antao" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/eric-antao" },
       { name: "Github", url: "https://github.com/giterichub" },
-      { name: "Portfolio", url: "#" }
+      { name: "Portfolio", url: "https://eric-portfolio-tawny.vercel.app" }
     ],
   },
   description:
