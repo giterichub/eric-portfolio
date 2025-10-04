@@ -11,7 +11,7 @@ export const contactContent = {
   resume: {
     resumeTitle: 'resume',
     resumeDownload: 'Download',
-    resumePath: '',
+    resumePath: '/assets/resume/EricAntao_Resume_2025_B.pdf',
   },
   hours: {
     hoursTitle: 'hours',
@@ -30,5 +30,5 @@ export const contactContent = {
     ],
   },
   description:
-    "We are happy to assist you with any inquiries. Reach out to us through phone, email, or visit us during our working hours."
+    "I am happy to assist you with any inquiries. Reach out to me through phone, email, or just download my resume to know more."
 };
