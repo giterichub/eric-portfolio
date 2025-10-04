@@ -47,17 +47,15 @@ const Contact = () => {
           </div>
         </section>
 
-        <section id="contact-hours">
+        <section id="contact-resume">
           <div className="contact-content">
-            <h2 className="contact-header">{contactContent.hours.hoursTitle}</h2>
-            <ul className="ctt-hours__list">
-              {contactContent.hours.allHours.map((h, idx) => (
-                <li key={idx} className="ctt-hours__each">
-                  <span>{h.day}</span>
-                  <span>{h.time}</span>
-                </li>
-              ))}
-            </ul>
+            <h2 className="contact-header">{contactContent.resume.resumeTitle}</h2>
+              <a
+              className="ctt-location__address"
+              target="_blank"
+            >
+              {contactContent.resume.resumeDownload}
+            </a>
           </div>
         </section>
 
