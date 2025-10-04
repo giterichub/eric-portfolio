@@ -29,7 +29,6 @@ export interface Project {
     id: string;
     title: string;
     description: string;
-    images: string[]; // Array of image URLs
     featuredImage?: string; // Main image for cards
     backgroundColor?: string;
     isFeatured?: boolean; // Shown in ProjectComponent
@@ -54,10 +53,6 @@ export interface Project {
       id: 'game-hub',
       title: 'Game Hub',
       description: 'Discover and explore the latest games with ease using our dynamic game library. Filter and sort games by genre, platform, popularity, and more. Search within specific filters, view game ratings, and explore detailed platform compatibility—all with an intuitive, infinite scroll interface. Get personalized game recommendations that suit your preferences and keep up with the newest releases!',
-      images: [
-        'https://.../proj1-1.jpg',
-        'https://.../proj1-2.jpg'
-      ],
       featuredImage: '/assets/images/game-hub-2.webp',
       isFeatured: true,
       showInSlideshow: true,
@@ -70,10 +65,6 @@ export interface Project {
         id: 'movie-app',
         title: 'Movie App',
         description: 'Discover, bookmark, and explore your favorite movies with ease. View ratings, descriptions, and movie details at a glance, and dive deeper for full info—cast, director, genres, release year, and more. Plus, easily find related films with just a click!',
-        images: [
-          'https://.../proj1-1.jpg',
-          'https://.../proj1-2.jpg'
-        ],
         featuredImage: '/assets/images/movie-app-1.webp',
         isFeatured: true,
         showInSlideshow: true,
@@ -86,10 +77,6 @@ export interface Project {
         id: 'crosshair',
         title: 'Crosshair',
         description: 'Crosshair is a simple, visually appealing e-commerce site that displays a range of clothing products. The app showcases product images, names, and prices. Built using HTML and CSS, creating responsive layouts using flex and grid.',
-        images: [
-          'https://.../proj1-1.jpg',
-          'https://.../proj1-2.jpg'
-        ],
         featuredImage: '/assets/images/shopping-2.jpg',
         isFeatured: true,
         showInSlideshow: true,
@@ -102,10 +89,6 @@ export interface Project {
         id: 'portfolio',
         title: 'Portfolio',
         description: 'My personal portfolio is a responsive website built using HTML, CSS, and JavaScript. It features a sleek, modern design with both dark and light mode options for enhanced user experience. The site uses Flexbox and CSS Grid for a fluid, adaptable layout. It showcases my achievements, project timeline, and blog, with a dedicated contact form for inquiries.',
-        images: [
-          'https://.../proj1-1.jpg',
-          'https://.../proj1-2.jpg'
-        ],
         featuredImage: '/assets/images/portfolio-1.PNG',
         isFeatured: true,
         showInSlideshow: true,
@@ -118,10 +101,6 @@ export interface Project {
         id: 'gmail-todo',
         title: 'Gmail Styled Todo-List',
         description: 'This to-do list app replicates the clean, minimalist style of Gmail’s desktop interface. Built with HTML, CSS, and JavaScript, it allows users to add, delete, and mark tasks as complete, while also tracking the time of creation for each item. Made use of cookies to persist data across sessions.',
-        images: [
-          'https://.../proj1-1.jpg',
-          'https://.../proj1-2.jpg'
-        ],
         featuredImage: '/assets/images/todo-list-3.webp',
         isFeatured: true,
         showInSlideshow: true,

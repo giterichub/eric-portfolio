@@ -2,7 +2,6 @@ import { TechList } from "../content/skills";
 import '../styles/skillsmarqueeanimated.css'
 
 const SkillsMarqueeAnimated = () => {
-  console.log([...TechList, ...TechList]);
   return (
     <div className="marquee-main-container">
       <div className="about-pageWrap">
