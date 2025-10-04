@@ -1,12 +1,17 @@
 export const contactContent = {
   location: {
     locationTitle: 'location',
-    address: "123 Main Street, Margao, Goa"
+    address: "Margao, Goa"
   },
   getInTouch: {
     getInTouchTitle: 'get in touch',
     email: "ericantao99@gmail.com",
     phone: "+91 7972310647"
+  },
+  resume: {
+    resumeTitle: 'resume',
+    resumeDownload: 'Download',
+    resumePath: '',
   },
   hours: {
     hoursTitle: 'hours',
@@ -17,7 +22,7 @@ export const contactContent = {
     ],
   },
   socials: {
-    socialsTitle: 'follow us',
+    socialsTitle: 'follow me',
     allSocials: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/eric-antao" },
       { name: "Github", url: "https://github.com/giterichub" },
