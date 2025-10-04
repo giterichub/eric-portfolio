@@ -51,7 +51,7 @@ const Contact = () => {
           <div className="contact-content">
             <h2 className="contact-header">{contactContent.resume.resumeTitle}</h2>
               <a
-              href="/resume.pdf"
+              href={contactContent.resume.resumePath}
               className="ctt-location__address"
               target="_blank"
               rel="noopener noreferrer"

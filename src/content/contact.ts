@@ -11,6 +11,7 @@ export const contactContent = {
   resume: {
     resumeTitle: 'resume',
     resumeDownload: 'Download',
+    resumePath: '',
   },
   hours: {
     hoursTitle: 'hours',
