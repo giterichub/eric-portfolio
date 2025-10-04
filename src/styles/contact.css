@@ -102,7 +102,7 @@ a.ctt-location__address {
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "title location ctt"
-      "title hours    socials"
+      "title resume    socials"
       "text  text     text";
     padding-top: 4.7rem;
   }
@@ -144,7 +144,7 @@ a.ctt-location__address {
     align-self: start;
   }
 
-  #contact-location, #contact-git, #contact-hours, #contact-socials{
+  #contact-location, #contact-git, #contact-hours, #contact-resume, #contact-socials{
     border-top: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
   }
@@ -163,8 +163,8 @@ a.ctt-location__address {
     grid-area: ctt;
   }
 
-  #contact-hours {
-    grid-area: hours;
+  #contact-resume {
+    grid-area: resume;
   }
 
   #contact-socials {
@@ -198,7 +198,7 @@ a.ctt-location__address {
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "title location ctt"
-      "title hours    socials"
+      "title resume    socials"
       "text  text     text";
     padding-top: 4.7rem;
   }
@@ -238,7 +238,7 @@ a.ctt-location__address {
     align-self: start;
   }
 
-  #contact-location, #contact-git, #contact-hours, #contact-socials{
+  #contact-location, #contact-git, #contact-hours, #contact-resume, #contact-socials{
     border-top: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
   }
@@ -257,8 +257,12 @@ a.ctt-location__address {
     grid-area: ctt;
   }
 
-  #contact-hours {
+  /* #contact-hours {
     grid-area: hours;
+  } */
+
+  #contact-resume {
+    grid-area: resume;
   }
 
   #contact-socials {
@@ -303,7 +307,7 @@ a.ctt-location__address {
     grid-template-areas:
       "title title"
       "location ctt"
-      "hours socials"
+      "resume socials"
       "text text";
     padding-top: 2rem;
   }
@@ -333,8 +337,12 @@ a.ctt-location__address {
     padding: 2rem;
   }
 
-  #contact-hours {
+  /* #contact-hours {
     grid-area: hours;
+    padding: 2rem;
+  } */
+  #contact-resume {
+    grid-area: resume;
     padding: 2rem;
   }
 
@@ -358,7 +366,7 @@ a.ctt-location__address {
   .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
     font-size: clamp(22.8px, calc(22.8px + (6 * ((100vw - 768px) / 256))), 30.4px);
   }
-  #contact-text, #contact-socials, #contact-hours, #contact-git, #contact-location, #contact-title { 
+  #contact-text, #contact-socials, #contact-hours, #contact-resume, #contact-git, #contact-location, #contact-title { 
     border-top: 1px solid rgb(253, 251, 245);
   }
   #contact-socials, #contact-git { 
@@ -469,7 +477,7 @@ a.ctt-location__address {
       "title-right"
       "location"
       "ctt"
-      "hours"
+      "resume"
       "socials"
       "text";
     padding-top: 1rem;
@@ -480,6 +488,7 @@ a.ctt-location__address {
   #contact-location,
   #contact-git,
   #contact-hours,
+  #contact-resume,
   #contact-socials,
   #contact-text {
     padding: 1.5rem;
@@ -505,7 +514,7 @@ a.ctt-location__address {
   .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
     font-size: 1.4rem;
   }
-  #contact-location, #contact-git, #contact-hours, #contact-socials, #contact-text, #contact-title {
+  #contact-location, #contact-git, #contact-hours, #contact-resume, #contact-socials, #contact-text, #contact-title {
     border-top: 1px solid #24212170;
   }
 }
@@ -527,7 +536,7 @@ a.ctt-location__address {
   .ctt-location__address, .ctt-links__items>li>a, .ctt-hours__list>li>span, .ctt-social__items>li>a{
     font-size: 1.2rem;
   }
-  #contact-location, #contact-git, #contact-hours, #contact-socials, #contact-text, #contact-title {
+  #contact-location, #contact-git, #contact-hours, #contact-resume, #contact-socials, #contact-text, #contact-title {
     border-top: 1px solid #24212170;
   }
 }
